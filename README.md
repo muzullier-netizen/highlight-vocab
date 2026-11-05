@@ -1,5 +1,29 @@
 # 拾词：GitHub Pages 版
 
+## 2026-11-05：Supabase 多设备同步
+
+仍使用 https://muzullier-netizen.github.io/highlight-vocab/ 。页面顶部「云端同步」输入邮箱并发送登录链接，在当前电脑同一浏览器打开邮件即可登录；在其他电脑用同一个邮箱重复登录。离开前确认显示「已同步」。
+
+同步范围：三个词本的熟悉度、到期时间、重点与排除标记、本轮位置、三种拼写模式的统计和草稿、自添加原句，以及导入的原录音。内置词库与剑雅短句随网站发布，不需要重复上传。
+
+- 本地优先：断网仍可学习，登录后网络恢复、切回页面或点击「立即同步」会补传；前台每 30 秒检查远端变化，学习操作后约 1.5 秒触发同步。
+- 首次登录的历史计数取较大值，避免把两份相同旧备份重复相加；已有不同设备的独立历史无法自动区分是否重叠。首次合并后，使用上次确认的云端基线计算新增次数，再合并并发学习记录。
+- 每次上传带版本号及唯一请求编号。版本冲突先拉取再合并；服务器保留回执，响应丢失后重试不会重复增加次数。本机先写恢复标记再应用云端结果，支持中途中断恢复。
+- 在新电脑仅打开网页生成的空白新一轮不会覆盖云端续学位置。正常无变化轮询不会翻卡或重置当前答案。
+- 用户数据由 auth.uid() 隔离；没有匿名数据库读写。public.vocab_sync_pull / vocab_sync_push 为 SECURITY INVOKER 入口，实际写入和回执在非公开 vocab_internal schema 中，内部函数再次核对 auth.uid()。客户端仅包含 publishable key，没有 secret/service-role key。
+- 原音存入私有 vocab-private-audio 桶，路径以账号 UUID 开头，按 SHA-256 内容寻址并只新增；存储策略只允许读取和新增本人目录。本站不生成公开音频链接。旧音频对象暂不自动清理，以免删除另一台尚未完成同步所需的资料。
+- 两个云端账号不共用保留在同一浏览器里的本地数据；检测到换账号会停止同步，需使用独立浏览器配置。退出账号保留本机记录和未确认上传信息，便于原账号重新登录恢复。不要在不可信的公共电脑保留登录状态。
+- Supabase JS 固定为 2.119.0，UMD 文件和 MIT 许可证保存在 vendor/，从本站加载。
+
+项目：pgrpaxhbohvxfvebfncg。cloud-config.js 只保存公开项目 URL 和 publishable key。初始化 SQL 见 supabase/setup.sql；本次已应用的私有函数调整 SQL 见 supabase/private-functions.sql。使用现有项目时应先检查 schema，不要盲目重复运行调整脚本。
+
+登录返回网址：Supabase Authentication → URL Configuration 的 Site URL 及允许返回地址使用上面的 GitHub Pages 根地址。首次登录邮件由 Supabase Auth 发送；未配置自定义 SMTP 的项目可能仅允许团队成员邮箱，详见 https://supabase.com/docs/guides/auth/auth-smtp 。
+
+验证：node validate-sync.mjs；node validate-cloud-runtime.mjs。后者用两份独立本地存储及模拟云端验证并发计数、断网、响应丢失、刷新恢复、请求中的新练习、录音传输及账号切换。真实数据库事务测试覆盖权限隔离、版本冲突、重复请求和私有音频目录策略；所有测试数据已回滚。Supabase 安全检查无告警。尚未进行真实邮箱登录和实体双电脑浏览器实测；当前 Windows 浏览器的操作工具因不支持网址策略检查而停止。
+
+官方参考：https://supabase.com/docs/guides/auth/auth-email-passwordless 、https://supabase.com/docs/guides/database/postgres/row-level-security 、https://supabase.com/docs/guides/storage/security/access-control 。
+
+
 ## 2026-11-05：剑雅原句与合成音
 
 入口：?practice=synthetic#listening。听力专题的练习方式选择「剑雅原句 · 合成音」。内置 18 条短句，按 19 个词生成 19 个挖空练习，来自剑雅 9–19 的 Test 1 转录页；覆盖 215 个高频词中的 19 个，不代表已覆盖全词库。
@@ -24,7 +48,7 @@
 - **原题材料仍待接入**：九分学长账号已注册并登录，但尚未取得可导入的原录音文件、原句和时间段。网站不内置虚构的原音或题目。
 - 「原题资料与换设备续学」可选原录音文件，填写原题名、时间段和完整原句，用一对 `[ ]` 标出所选答案词，确认来源后保存。每个文件不超过 25 MB。音频在浏览器 IndexedDB 保存，不上传 GitHub 或其他服务器。
 - 换电脑：在家点击「导出学习包（含原音与进度）」，把 JSON 文件带到公司后点击「导入学习包」。学习包同时包含原音、句子、听力学习进度和拼写续学记录；按更新时间合并。原音总量上限 75 MB，导入包上限 110 MB。
-- 普通「导出进度」也包含拼写记录，但不包含原音。网站没有自动跨设备云同步。
+- 普通「导出进度」也包含拼写记录，但不包含原音。现在可使用云端同步；未登录时仍可手动迁移。
 
 验证：`node validate-listening.mjs`、`node validate-dictation.mjs`。后者中的音频字节仅是存储与播放控制的单元测试夹具，不是学习题目或原题材料。未进行浏览器声音实测。
 
@@ -52,7 +76,7 @@
 词条 id 应保持稳定；全局词库数量的页面文案当前为 161，增删词条时也需同步修改 index.html。
 
 ## 学习进度
-保存在当前浏览器。手机与公司电脑不自动同步，可使用导出／导入迁移。同域下不同路径的网站可能共用当前存储键 shici-progress-v1。
+保存在当前浏览器。手机与公司电脑登录同一同步账号后自动同步，也可使用导出／导入迁移。同域下不同路径的网站可能共用当前存储键 shici-progress-v1。
 换域名后，原 ChatGPT Sites 进度也不会自动带过来：先在原网站导出，再在这里导入。
 网站和词库公开，学习进度不上传。GitHub Pages 不提供学习记录数据库。
 朗读依赖浏览器设备语音能力。公司是否能访问 github.io 需在公司网络实际验证。
