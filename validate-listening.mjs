@@ -21,7 +21,7 @@ export async function setup(hash='',extras={}){
  fetch:async file=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(file.split('?')[0],'utf8'))})};
  Object.assign(env,extras);vm.createContext(env);await vm.runInContext(fs.readFileSync('app.js','utf8'),env);
  env.window.render=()=>vm.runInContext('render()',env);env.window.validateState=s=>{env.incomingState=s;return vm.runInContext('validateState(incomingState)',env)};
- if(extras.dictation)vm.runInContext(fs.readFileSync('dictation.js','utf8'),env);
+ if(extras.dictation){vm.runInContext(fs.readFileSync('cambridge-sentences.js','utf8'),env);vm.runInContext(fs.readFileSync('dictation.js','utf8'),env);}
  return {nodes,tabs,ratings,env,run:s=>vm.runInContext(s,env)};
 }
 let s=await setup();assert.equal(s.run('deck'),'reading','Existing deck preference is preserved');
