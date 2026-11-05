@@ -1,0 +1,6123 @@
+[
+  {
+    "id": "listening:water",
+    "word": "Water",
+    "meaning": "n. 水",
+    "spoken": "Water",
+    "phonetic": "",
+    "forms": [
+      "Water"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 15,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "drinking water → 饮用水；water 通常不可数，不写 waters 表示一般饮水。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:transport",
+    "word": "transport",
+    "meaning": "n. 交通；运输；v. 运输",
+    "spoken": "transport",
+    "phonetic": "",
+    "forms": [
+      "transport"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 10,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "public transport → 公共交通；transport 的结尾写 -port。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:fire",
+    "word": "fire",
+    "meaning": "n. 火；火灾；v. 开火；解雇",
+    "spoken": "fire",
+    "phonetic": "",
+    "forms": [
+      "fire"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 9,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a fire alarm → 火警报警器；fire 与报警、消防场景一起记。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:training",
+    "word": "training",
+    "meaning": "n. 培训；训练",
+    "spoken": "training",
+    "phonetic": "",
+    "forms": [
+      "training"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 9,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "staff training → 员工培训；train 加 -ing，通常作不可数名词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:garden",
+    "word": "garden",
+    "meaning": "n. 花园",
+    "spoken": "garden",
+    "phonetic": "",
+    "forms": [
+      "garden"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 8,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a vegetable garden → 菜园；garden 与 gardening（园艺）连着记。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:glass",
+    "word": "glass",
+    "meaning": "n. 玻璃；玻璃杯",
+    "spoken": "glass",
+    "phonetic": "",
+    "forms": [
+      "glass"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 8,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a glass of water → 一杯水；glass 也可指玻璃，末尾两个 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:insects",
+    "word": "insects",
+    "meaning": "n. 昆虫",
+    "spoken": "insects",
+    "phonetic": "",
+    "forms": [
+      "insects"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 8,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "flying insects → 飞行的昆虫；insect 的复数末尾是 -ts。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:insurance",
+    "word": "insurance",
+    "meaning": "n. 保险",
+    "spoken": "insurance",
+    "phonetic": "",
+    "forms": [
+      "insurance"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 8,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "travel insurance → 旅行保险；insurance 通常不可数，结尾是 -ance。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:park",
+    "word": "Park",
+    "meaning": "n. 公园；v. 停车",
+    "spoken": "Park",
+    "phonetic": "",
+    "forms": [
+      "Park"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 8,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a national park → 国家公园；park a car → 停车。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:plastic",
+    "word": "plastic",
+    "meaning": "n. 塑料；adj. 塑料的",
+    "spoken": "plastic",
+    "phonetic": "",
+    "forms": [
+      "plastic"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 8,
+    "parts": [
+      1,
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "plastic bags → 塑料袋；plastic 的名词、形容词形式相同。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:thursday",
+    "word": "Thursday",
+    "meaning": "n. 星期四",
+    "spoken": "Thursday",
+    "phonetic": "",
+    "forms": [
+      "Thursday"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "frequency": 8,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Thursday → 星期四；拼写以 Th 开头，中间有 rs，首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:wood",
+    "word": "wood",
+    "meaning": "n. 木头；木材",
+    "spoken": "wood",
+    "phonetic": "",
+    "forms": [
+      "wood"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 8,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "made of wood → 木制；wood 与 would 发音相同，要结合语境。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:birds",
+    "word": "birds",
+    "meaning": "n. 鸟",
+    "spoken": "birds",
+    "phonetic": "",
+    "forms": [
+      "birds"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [
+      1,
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "watch birds → 观鸟；bird 是一只鸟，birds 是复数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:climate",
+    "word": "climate",
+    "meaning": "n. 气候",
+    "spoken": "climate",
+    "phonetic": "",
+    "forms": [
+      "climate"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "climate change → 气候变化；区别短期天气 weather 与长期气候 climate。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:environment",
+    "word": "environment",
+    "meaning": "n. 环境",
+    "spoken": "environment",
+    "phonetic": "",
+    "forms": [
+      "environment"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "protect the environment → 保护环境；检查拼写中的 n 和结尾 -ment。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:farm",
+    "word": "farm",
+    "meaning": "n. 农场",
+    "spoken": "farm",
+    "phonetic": "",
+    "forms": [
+      "farm"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "work on a farm → 在农场工作；farm 是农场，farmer 是农民。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:garage",
+    "word": "garage",
+    "meaning": "n. 车库；汽车修理厂",
+    "spoken": "garage",
+    "phonetic": "",
+    "forms": [
+      "garage"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "park in the garage → 停在车库；garage 最后仍有 e。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:good map",
+    "word": "good map",
+    "meaning": "n. 好用的地图",
+    "spoken": "good map",
+    "phonetic": "",
+    "forms": [
+      "good map"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a good map → 一张好用的地图；这是两个词，核对填空字数限制。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:light",
+    "word": "light",
+    "meaning": "n. 光；灯；adj. 轻的；明亮的",
+    "spoken": "light",
+    "phonetic": "",
+    "forms": [
+      "light"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "natural light → 自然光；a light bag → 轻的袋子；按搭配分义。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:plants",
+    "word": "plants",
+    "meaning": "n. 植物",
+    "spoken": "plants",
+    "phonetic": "",
+    "forms": [
+      "plants"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "water the plants → 给植物浇水；plant 加复数 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:temperature",
+    "word": "temperature",
+    "meaning": "n. 温度",
+    "spoken": "temperature",
+    "phonetic": "",
+    "forms": [
+      "temperature"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "room temperature → 室温；拼写中间有 -pera-，别按吞音漏写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:time",
+    "word": "time",
+    "meaning": "n. 时间；次数；v. 计时",
+    "spoken": "time",
+    "phonetic": "",
+    "forms": [
+      "time"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 7,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "on time → 准时；at a time → 一次；先确定搭配意义。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:forests",
+    "word": "forests",
+    "meaning": "n. 森林",
+    "spoken": "forests",
+    "phonetic": "",
+    "forms": [
+      "forests"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "protect forests → 保护森林；与 forest 分开练习复数结尾。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:furniture",
+    "word": "furniture",
+    "meaning": "n. 家具",
+    "spoken": "furniture",
+    "phonetic": "",
+    "forms": [
+      "furniture"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "buy furniture → 买家具；furniture 通常不可数，不写 furnitures。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:health",
+    "word": "health",
+    "meaning": "n. 健康",
+    "spoken": "health",
+    "phonetic": "",
+    "forms": [
+      "health"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "good health → 健康；health 是名词，healthy 是形容词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:helicopter",
+    "word": "helicopter",
+    "meaning": "n. 直升机",
+    "spoken": "helicopter",
+    "phonetic": "",
+    "forms": [
+      "helicopter"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a helicopter flight → 直升机飞行；按 heli / copter 两段核对拼写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:library",
+    "word": "library",
+    "meaning": "n. 图书馆",
+    "spoken": "library",
+    "phonetic": "",
+    "forms": [
+      "library"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "borrow from the library → 从图书馆借阅；拼写里有两个 r。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:migration",
+    "word": "migration",
+    "meaning": "n. 迁徙；移民",
+    "spoken": "migration",
+    "phonetic": "",
+    "forms": [
+      "migration"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "bird migration → 鸟类迁徙；migrate 与 migration 组成词族。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:river",
+    "word": "river",
+    "meaning": "n. 河流",
+    "spoken": "river",
+    "phonetic": "",
+    "forms": [
+      "river"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "cross the river → 过河；river 和 rivers 分别核对单复数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:smell",
+    "word": "smell",
+    "meaning": "n. 气味；嗅觉；v. 闻",
+    "spoken": "smell",
+    "phonetic": "",
+    "forms": [
+      "smell"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a strong smell → 强烈的气味；smell the flowers → 闻花香。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:station",
+    "word": "station",
+    "meaning": "n. 车站；站",
+    "spoken": "station",
+    "phonetic": "",
+    "forms": [
+      "station"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a railway station → 火车站；station 不要与 stationary 混写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:stress",
+    "word": "stress",
+    "meaning": "n. 压力；应力",
+    "spoken": "stress",
+    "phonetic": "",
+    "forms": [
+      "stress"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "under stress → 承受压力；stress 末尾两个 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:tourism",
+    "word": "tourism",
+    "meaning": "n. 旅游业",
+    "spoken": "tourism",
+    "phonetic": "",
+    "forms": [
+      "tourism"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 6,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "the tourism industry → 旅游业；tour + -ism，与 tourist（游客）区分。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:40",
+    "word": "40",
+    "meaning": "数值：四十（forty）",
+    "spoken": "forty",
+    "phonetic": "",
+    "forms": [
+      "40"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "数值",
+    "frequency": 5,
+    "parts": [
+      1,
+      2
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "forty → 四十；不要误写成 fourty。与 fourteen（十四）对照听。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:agriculture",
+    "word": "agriculture",
+    "meaning": "n. 农业",
+    "spoken": "agriculture",
+    "phonetic": "",
+    "forms": [
+      "agriculture"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "agriculture and industry → 农业与工业；连同 agriculture 的完整拼写一起记。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:bacteria",
+    "word": "bacteria",
+    "meaning": "n. 细菌",
+    "spoken": "bacteria",
+    "phonetic": "",
+    "forms": [
+      "bacteria"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "bacteria 是 bacterium 的复数；不是 bacterias。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:clean",
+    "word": "clean",
+    "meaning": "adj. 干净的；v. 打扫，清洁",
+    "spoken": "clean",
+    "phonetic": "",
+    "forms": [
+      "clean"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "clean water → 干净的水；clean the room → 打扫房间。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:confidence",
+    "word": "confidence",
+    "meaning": "n. 信心；自信",
+    "spoken": "confidence",
+    "phonetic": "",
+    "forms": [
+      "confidence"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "build confidence → 建立信心；与 confident（有信心的）组成词族记忆。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:desert",
+    "word": "desert",
+    "meaning": "n. 沙漠",
+    "spoken": "desert",
+    "phonetic": "",
+    "forms": [
+      "desert"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a dry desert → 干燥的沙漠；desert 只有一个 s，dessert（甜点）有两个。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:family",
+    "word": "family",
+    "meaning": "n. 家庭；家人",
+    "spoken": "family",
+    "phonetic": "",
+    "forms": [
+      "family"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a host family → 寄宿家庭；family 单数，families 复数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:flexible",
+    "word": "Flexible",
+    "meaning": "adj. 灵活的；柔韧的",
+    "spoken": "Flexible",
+    "phonetic": "",
+    "forms": [
+      "Flexible"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "flexible working hours → 灵活工作时间；结尾是 -ible，不是 -able。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:flowers",
+    "word": "flowers",
+    "meaning": "n. 花",
+    "spoken": "flowers",
+    "phonetic": "",
+    "forms": [
+      "flowers"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a bunch of flowers → 一束花；flower（花）与 flour（面粉）发音相同，要看语境。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:food",
+    "word": "food",
+    "meaning": "n. 食物",
+    "spoken": "food",
+    "phonetic": "",
+    "forms": [
+      "food"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "fresh food → 新鲜食物；一般作为食物总称时不可数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:government",
+    "word": "government",
+    "meaning": "n. 政府",
+    "spoken": "government",
+    "phonetic": "",
+    "forms": [
+      "government"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "govern + -ment → government；检查中间的 n，别漏写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:hospital",
+    "word": "hospital",
+    "meaning": "n. 医院",
+    "spoken": "hospital",
+    "phonetic": "",
+    "forms": [
+      "hospital"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "go to hospital → 去医院；hospital 与 hospitality（好客）不要混写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:hunting",
+    "word": "hunting",
+    "meaning": "n. 狩猎",
+    "spoken": "hunting",
+    "phonetic": "",
+    "forms": [
+      "hunting"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "ban hunting → 禁止狩猎；hunt 加 -ing，词尾保留 t。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:manager",
+    "word": "manager",
+    "meaning": "n. 经理",
+    "spoken": "manager",
+    "phonetic": "",
+    "forms": [
+      "manager"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a hotel manager → 酒店经理；manage 加 -r，不是 maneger。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:money",
+    "word": "money",
+    "meaning": "n. 钱",
+    "spoken": "money",
+    "phonetic": "",
+    "forms": [
+      "money"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "save money → 存钱；money 通常不可数，不写 moneys 来表示一般的钱。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:museum",
+    "word": "museum",
+    "meaning": "n. 博物馆",
+    "spoken": "museum",
+    "phonetic": "",
+    "forms": [
+      "museum"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "visit a museum → 参观博物馆；museum 结尾是 -eum。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:noise",
+    "word": "noise",
+    "meaning": "n. 噪音",
+    "spoken": "noise",
+    "phonetic": "",
+    "forms": [
+      "noise"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "traffic noise → 交通噪音；noise 与 noisy（吵闹的）组成词族。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:parking",
+    "word": "parking",
+    "meaning": "n. 停车；停车位",
+    "spoken": "parking",
+    "phonetic": "",
+    "forms": [
+      "parking"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "free parking → 免费停车；parking 通常表示停车或停车位的总称。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:photographs",
+    "word": "photographs",
+    "meaning": "n. 照片",
+    "spoken": "photographs",
+    "phonetic": "",
+    "forms": [
+      "photographs"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "take photographs → 拍照；photo + graphs，注意 ph 而不是 f。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:roof",
+    "word": "roof",
+    "meaning": "n. 屋顶",
+    "spoken": "roof",
+    "phonetic": "",
+    "forms": [
+      "roof"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "repair the roof → 修屋顶；roof 中间两个 o。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:safety",
+    "word": "safety",
+    "meaning": "n. 安全",
+    "spoken": "safety",
+    "phonetic": "",
+    "forms": [
+      "safety"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "safety equipment → 安全设备；safe 与 safety 组成词族。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:salt",
+    "word": "salt",
+    "meaning": "n. 盐",
+    "spoken": "salt",
+    "phonetic": "",
+    "forms": [
+      "salt"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "add salt → 加盐；salt 在这里不可数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:school",
+    "word": "school",
+    "meaning": "n. 学校",
+    "spoken": "school",
+    "phonetic": "",
+    "forms": [
+      "school"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a language school → 语言学校；school 拼写里有 ch。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:soil",
+    "word": "soil",
+    "meaning": "n. 土壤",
+    "spoken": "soil",
+    "phonetic": "",
+    "forms": [
+      "soil"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "soil quality → 土壤质量；soil 与 oil 对照时注意开头 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:stone",
+    "word": "stone",
+    "meaning": "n. 石头；石材",
+    "spoken": "stone",
+    "phonetic": "",
+    "forms": [
+      "stone"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "made of stone → 石头制成；a stone 可指一块石头。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:storm",
+    "word": "storm",
+    "meaning": "n. 暴风雨",
+    "spoken": "storm",
+    "phonetic": "",
+    "forms": [
+      "storm"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a severe storm → 强烈的暴风雨；核对是否要写复数 storms。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:tennis",
+    "word": "tennis",
+    "meaning": "n. 网球",
+    "spoken": "tennis",
+    "phonetic": "",
+    "forms": [
+      "tennis"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "play tennis → 打网球；tennis 中间两个 n。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:tools",
+    "word": "tools",
+    "meaning": "n. 工具",
+    "spoken": "tools",
+    "phonetic": "",
+    "forms": [
+      "tools"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "gardening tools → 园艺工具；tool 加复数 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:weight",
+    "word": "weight",
+    "meaning": "n. 重量；体重",
+    "spoken": "weight",
+    "phonetic": "",
+    "forms": [
+      "weight"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 5,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "lose weight → 减重；weigh（称重）与 weight（重量）区别词尾 t。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:8",
+    "word": "8",
+    "meaning": "数值：八（eight）",
+    "spoken": "eight",
+    "phonetic": "",
+    "forms": [
+      "8"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "数值",
+    "frequency": 4,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "eight → 八；eight 的拼写中有 gh；听数字时可先记阿拉伯数字。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:amazing weather",
+    "word": "amazing weather",
+    "meaning": "n. 极好的天气",
+    "spoken": "amazing weather",
+    "phonetic": "",
+    "forms": [
+      "amazing weather"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "amazing weather → 极好的天气；这是两个词，weather 在这里不可数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:animals",
+    "word": "animals",
+    "meaning": "n. 动物",
+    "spoken": "animals",
+    "phonetic": "",
+    "forms": [
+      "animals"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "wild animals → 野生动物；填空注意保留复数 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:august",
+    "word": "August",
+    "meaning": "n. 八月",
+    "spoken": "August",
+    "phonetic": "",
+    "forms": [
+      "August"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "frequency": 4,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "August → 八月；月份首字母大写，中间是 -gu-。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:back",
+    "word": "back",
+    "meaning": "n. 背部；后面；adv. 向后；回",
+    "spoken": "back",
+    "phonetic": "",
+    "forms": [
+      "back"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "back pain → 背痛；come back → 回来；同词在不同搭配里意义不同。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:bones",
+    "word": "bones",
+    "meaning": "n. 骨头",
+    "spoken": "bones",
+    "phonetic": "",
+    "forms": [
+      "bones"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "broken bones → 骨折；bone → bones，注意词尾复数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:car",
+    "word": "car",
+    "meaning": "n. 汽车",
+    "spoken": "car",
+    "phonetic": "",
+    "forms": [
+      "car"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "rent a car → 租车；car park → 停车场，先辨清是一个词还是搭配。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:cave",
+    "word": "cave",
+    "meaning": "n. 洞穴",
+    "spoken": "cave",
+    "phonetic": "",
+    "forms": [
+      "cave"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "inside a cave → 在洞穴里；与复数 caves 分开练习。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:chocolate",
+    "word": "chocolate",
+    "meaning": "n. 巧克力",
+    "spoken": "chocolate",
+    "phonetic": "",
+    "forms": [
+      "chocolate"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "hot chocolate → 热巧克力饮料；拼写结尾是 -late。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:color",
+    "word": "color",
+    "meaning": "n. 颜色",
+    "spoken": "color",
+    "phonetic": "",
+    "forms": [
+      "color"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "color 与 colour 是美式、英式拼写；做填空时核对题目要求。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:corn",
+    "word": "corn",
+    "meaning": "n. 玉米",
+    "spoken": "corn",
+    "phonetic": "",
+    "forms": [
+      "corn"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "grow corn → 种玉米；corn 在这种用法中通常不可数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:disease",
+    "word": "disease",
+    "meaning": "n. 疾病",
+    "spoken": "disease",
+    "phonetic": "",
+    "forms": [
+      "disease"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "prevent disease → 预防疾病；disease 与 diseases 的单复数分开练。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:diseases",
+    "word": "diseases",
+    "meaning": "n. 疾病",
+    "spoken": "diseases",
+    "phonetic": "",
+    "forms": [
+      "diseases"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "infectious diseases → 传染病；比 disease 多一个复数 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:diving",
+    "word": "diving",
+    "meaning": "n. 潜水；跳水",
+    "spoken": "diving",
+    "phonetic": "",
+    "forms": [
+      "diving"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "go diving → 去潜水；dive 去掉末尾 e 再加 -ing。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:dry",
+    "word": "dry",
+    "meaning": "adj. 干的；v. 使干燥",
+    "spoken": "dry",
+    "phonetic": "",
+    "forms": [
+      "dry"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "dry clothes → 干衣服；keep dry → 保持干燥；与 wet（湿的）对照记。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:energy",
+    "word": "energy",
+    "meaning": "n. 能源；能量；精力",
+    "spoken": "energy",
+    "phonetic": "",
+    "forms": [
+      "energy"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "save energy → 节约能源；energy 也可指人的精力。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:face",
+    "word": "face",
+    "meaning": "n. 脸；表面；v. 面对",
+    "spoken": "face",
+    "phonetic": "",
+    "forms": [
+      "face"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "face the entrance → 面向入口；wash your face → 洗脸。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:farming",
+    "word": "farming",
+    "meaning": "n. 农业；耕作",
+    "spoken": "farming",
+    "phonetic": "",
+    "forms": [
+      "farming"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "organic farming → 有机农业；farm 加 -ing 表示农业活动。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:fear",
+    "word": "fear",
+    "meaning": "n. 恐惧；v. 害怕",
+    "spoken": "fear",
+    "phonetic": "",
+    "forms": [
+      "fear"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "fear of heights → 恐高；fear 可表示恐惧或害怕。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:flooding",
+    "word": "flooding",
+    "meaning": "n. 洪水；泛滥",
+    "spoken": "flooding",
+    "phonetic": "",
+    "forms": [
+      "flooding"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "prevent flooding → 防止洪水泛滥；flood 加 -ing，拼写保留 oo。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:gold",
+    "word": "gold",
+    "meaning": "n. 金，黄金；金牌；adj. 金色的",
+    "spoken": "gold",
+    "phonetic": "",
+    "forms": [
+      "gold"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a gold medal → 金牌；gold 表示金，golden 常形容金色的。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:golf",
+    "word": "golf",
+    "meaning": "n. 高尔夫球",
+    "spoken": "golf",
+    "phonetic": "",
+    "forms": [
+      "golf"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "play golf → 打高尔夫球；golf 不要与 gulf（海湾）混写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:grass",
+    "word": "grass",
+    "meaning": "n. 草",
+    "spoken": "grass",
+    "phonetic": "",
+    "forms": [
+      "grass"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "cut the grass → 割草；grass 通常不可数，词尾有两个 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:history",
+    "word": "history",
+    "meaning": "n. 历史",
+    "spoken": "history",
+    "phonetic": "",
+    "forms": [
+      "history"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "history museum → 历史博物馆；historical 是对应的形容词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:kitchen",
+    "word": "kitchen",
+    "meaning": "n. 厨房",
+    "spoken": "kitchen",
+    "phonetic": "",
+    "forms": [
+      "kitchen"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a shared kitchen → 共用厨房；kitchen 中间有 tch。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:lock",
+    "word": "lock",
+    "meaning": "n. 锁；v. 锁上",
+    "spoken": "lock",
+    "phonetic": "",
+    "forms": [
+      "lock"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "lock the door → 锁门；a door lock → 门锁。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:market",
+    "word": "Market",
+    "meaning": "n. 市场；集市",
+    "spoken": "Market",
+    "phonetic": "",
+    "forms": [
+      "Market"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "local market → 当地市场；supermarket 中也能看见 market。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:maths",
+    "word": "maths",
+    "meaning": "n. 数学",
+    "spoken": "maths",
+    "phonetic": "",
+    "forms": [
+      "maths"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "study maths → 学数学；英式常用 maths，末尾有 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:medicine",
+    "word": "medicine",
+    "meaning": "n. 药；医学",
+    "spoken": "medicine",
+    "phonetic": "",
+    "forms": [
+      "medicine"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "take medicine → 吃药；medicine 也可指医学。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:metal",
+    "word": "metal",
+    "meaning": "n. 金属",
+    "spoken": "metal",
+    "phonetic": "",
+    "forms": [
+      "metal"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "made of metal → 金属制成；metal 与 medal（奖牌）注意中间辅音。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:newspapers",
+    "word": "newspapers",
+    "meaning": "n. 报纸",
+    "spoken": "newspapers",
+    "phonetic": "",
+    "forms": [
+      "newspapers"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "read newspapers → 读报纸；news + papers，注意最后的复数 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:night",
+    "word": "night",
+    "meaning": "n. 夜晚",
+    "spoken": "night",
+    "phonetic": "",
+    "forms": [
+      "night"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "at night → 在夜里；night 与 knight（骑士）同音，靠语境区分。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:open",
+    "word": "open",
+    "meaning": "adj. 开放的；打开的；v. 打开",
+    "spoken": "open",
+    "phonetic": "",
+    "forms": [
+      "open"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "open to the public → 向公众开放；open the door → 开门。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:photos",
+    "word": "photos",
+    "meaning": "n. 照片",
+    "spoken": "photos",
+    "phonetic": "",
+    "forms": [
+      "photos"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "take photos → 拍照；photo 的复数 photos 只加 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:piano",
+    "word": "piano",
+    "meaning": "n. 钢琴",
+    "spoken": "piano",
+    "phonetic": "",
+    "forms": [
+      "piano"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "play the piano → 弹钢琴；piano 的复数 pianos 不加 e。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:pollution",
+    "word": "pollution",
+    "meaning": "n. 污染",
+    "spoken": "pollution",
+    "phonetic": "",
+    "forms": [
+      "pollution"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "air pollution → 空气污染；pollute 与 pollution 连着记，双 l。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:powder",
+    "word": "powder",
+    "meaning": "n. 粉末",
+    "spoken": "powder",
+    "phonetic": "",
+    "forms": [
+      "powder"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "washing powder → 洗衣粉；powder 的中间是 -wd-。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:public",
+    "word": "public",
+    "meaning": "adj. 公共的；n. 公众",
+    "spoken": "public",
+    "phonetic": "",
+    "forms": [
+      "public"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "public transport → 公共交通；the public → 公众。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:quality",
+    "word": "quality",
+    "meaning": "n. 质量；品质",
+    "spoken": "quality",
+    "phonetic": "",
+    "forms": [
+      "quality"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "water quality → 水质；quality（质量）不要写成 quantity（数量）。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:radio",
+    "word": "radio",
+    "meaning": "n. 收音机；无线电",
+    "spoken": "radio",
+    "phonetic": "",
+    "forms": [
+      "radio"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a radio programme → 广播节目；radio 本身是一个词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:science",
+    "word": "science",
+    "meaning": "n. 科学",
+    "spoken": "science",
+    "phonetic": "",
+    "forms": [
+      "science"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "study science → 学科学；science 中间写 -cie-。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:security",
+    "word": "security",
+    "meaning": "n. 安全；保安",
+    "spoken": "security",
+    "phonetic": "",
+    "forms": [
+      "security"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "security staff → 保安人员；secure 与 security 组成词族。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:silver",
+    "word": "silver",
+    "meaning": "n. 银；adj. 银色的",
+    "spoken": "silver",
+    "phonetic": "",
+    "forms": [
+      "silver"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a silver medal → 银牌；silver 与 gold 放在一起记。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:sleep",
+    "word": "sleep",
+    "meaning": "n. 睡眠；v. 睡觉",
+    "spoken": "sleep",
+    "phonetic": "",
+    "forms": [
+      "sleep"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "lack of sleep → 睡眠不足；sleep 中间两个 e。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:smoke",
+    "word": "smoke",
+    "meaning": "n. 烟；v. 吸烟；冒烟",
+    "spoken": "smoke",
+    "phonetic": "",
+    "forms": [
+      "smoke"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "smoke alarm → 烟雾报警器；与 fire alarm 联系场景记忆。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:social",
+    "word": "social",
+    "meaning": "adj. 社会的；社交的",
+    "spoken": "social",
+    "phonetic": "",
+    "forms": [
+      "social"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "social skills → 社交技能；social 是形容词，不是 society。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:space",
+    "word": "space",
+    "meaning": "n. 空间；太空",
+    "spoken": "space",
+    "phonetic": "",
+    "forms": [
+      "space"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "storage space → 储存空间；space 也可指太空。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:studio",
+    "word": "studio",
+    "meaning": "n. 工作室；单间公寓；演播室",
+    "spoken": "studio",
+    "phonetic": "",
+    "forms": [
+      "studio"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a studio apartment → 单间公寓；也可指演播室或工作室。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:sun",
+    "word": "sun",
+    "meaning": "n. 太阳；阳光",
+    "spoken": "sun",
+    "phonetic": "",
+    "forms": [
+      "sun"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "sun protection → 防晒；sun 与 son 发音相同，要看语境。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:supermarket",
+    "word": "supermarket",
+    "meaning": "n. 超市",
+    "spoken": "supermarket",
+    "phonetic": "",
+    "forms": [
+      "supermarket"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "shop at a supermarket → 在超市购物；super + market。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:swimming",
+    "word": "swimming",
+    "meaning": "n. 游泳",
+    "spoken": "swimming",
+    "phonetic": "",
+    "forms": [
+      "swimming"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "go swimming → 去游泳；swim 加 -ing 要双写 m。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:the cost",
+    "word": "the cost",
+    "meaning": "n. 费用；成本",
+    "spoken": "the cost",
+    "phonetic": "",
+    "forms": [
+      "the cost"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "the cost of travel → 旅行费用；the cost 是两个词，核对字数限制。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:trade",
+    "word": "trade",
+    "meaning": "n. 贸易；v. 交易",
+    "spoken": "trade",
+    "phonetic": "",
+    "forms": [
+      "trade"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "international trade → 国际贸易；trade 末尾有 e。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:triangle",
+    "word": "triangle",
+    "meaning": "n. 三角形",
+    "spoken": "triangle",
+    "phonetic": "",
+    "forms": [
+      "triangle"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a triangle has three sides → 三角形有三条边；tri- 与三联系记忆。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:waiter",
+    "word": "waiter",
+    "meaning": "n. 服务员",
+    "spoken": "waiter",
+    "phonetic": "",
+    "forms": [
+      "waiter"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a restaurant waiter → 餐厅服务员；wait + -er。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:wind",
+    "word": "wind",
+    "meaning": "n. 风",
+    "spoken": "wind",
+    "phonetic": "",
+    "forms": [
+      "wind"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 4,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "strong wind → 强风；表示风时，与表示上弦或缠绕的动词读法不同。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:10,000",
+    "word": "10,000",
+    "meaning": "数值：一万（ten thousand）",
+    "spoken": "ten thousand",
+    "phonetic": "",
+    "forms": [
+      "10,000"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "数值",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "ten thousand → 一万；这里的 thousand 用单数形式。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:12",
+    "word": "12",
+    "meaning": "数值：十二（twelve）",
+    "spoken": "twelve",
+    "phonetic": "",
+    "forms": [
+      "12"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "数值",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "twelve → 十二；注意结尾 -lve，与 twenty（二十）区分。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:19",
+    "word": "19",
+    "meaning": "数值：十九（nineteen）",
+    "spoken": "nineteen",
+    "phonetic": "",
+    "forms": [
+      "19"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "数值",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "nineteen → 十九；与 ninety（九十）对照听重音和词尾。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:2",
+    "word": "2",
+    "meaning": "数值：二（two）",
+    "spoken": "two",
+    "phonetic": "",
+    "forms": [
+      "2"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "数值",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "two → 二；two、to、too 可能同音，数字空要看题干语境。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:advertising",
+    "word": "advertising",
+    "meaning": "n. 广告；广告业",
+    "spoken": "advertising",
+    "phonetic": "",
+    "forms": [
+      "advertising"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "advertise → advertising：做广告 → 广告活动；结尾写 -ising。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:age",
+    "word": "age",
+    "meaning": "n. 年龄；时代",
+    "spoken": "age",
+    "phonetic": "",
+    "forms": [
+      "age"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "at the age of ten → 在十岁时；age 可指年龄，也可指时代。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:air",
+    "word": "air",
+    "meaning": "n. 空气",
+    "spoken": "air",
+    "phonetic": "",
+    "forms": [
+      "air"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "fresh air → 新鲜空气；这里的 air 不可数，不加 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:balcony",
+    "word": "balcony",
+    "meaning": "n. 阳台",
+    "spoken": "balcony",
+    "phonetic": "",
+    "forms": [
+      "balcony"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a room with a balcony → 带阳台的房间；balcony 结尾是 -ony。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:basement",
+    "word": "basement",
+    "meaning": "n. 地下室",
+    "spoken": "basement",
+    "phonetic": "",
+    "forms": [
+      "basement"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "in the basement → 在地下室；将 base 与楼房底部的位置联系记忆。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:beach",
+    "word": "beach",
+    "meaning": "n. 海滩",
+    "spoken": "beach",
+    "phonetic": "",
+    "forms": [
+      "beach"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "on the beach → 在海滩上；beach 与 peach 只差首字母，先听清开头。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:bicycle",
+    "word": "bicycle",
+    "meaning": "n. 自行车",
+    "spoken": "bicycle",
+    "phonetic": "",
+    "forms": [
+      "bicycle"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "ride a bicycle → 骑自行车；bicycle 中间写 cycle。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:books",
+    "word": "books",
+    "meaning": "n. 书",
+    "spoken": "books",
+    "phonetic": "",
+    "forms": [
+      "books"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "borrow books → 借书；听到复数时别漏掉 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:business",
+    "word": "business",
+    "meaning": "n. 商业，生意；公司",
+    "spoken": "business",
+    "phonetic": "",
+    "forms": [
+      "business"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "business management → 企业管理；business 中间是 -si-，不是按中文发音拼写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:cafe",
+    "word": "cafe",
+    "meaning": "n. 咖啡馆",
+    "spoken": "cafe",
+    "phonetic": "",
+    "forms": [
+      "cafe"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      2
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "meet at a cafe → 在咖啡馆见面；与 coffee（咖啡饮品）区分。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:carbon",
+    "word": "carbon",
+    "meaning": "n. 碳",
+    "spoken": "carbon",
+    "phonetic": "",
+    "forms": [
+      "carbon"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "carbon dioxide → 二氧化碳；carbon 是其中的碳，不是完整短语。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:carpet",
+    "word": "carpet",
+    "meaning": "n. 地毯",
+    "spoken": "carpet",
+    "phonetic": "",
+    "forms": [
+      "carpet"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a wool carpet → 羊毛地毯；将 carpet 和房间地面联系起来。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:cheese",
+    "word": "cheese",
+    "meaning": "n. 奶酪",
+    "spoken": "cheese",
+    "phonetic": "",
+    "forms": [
+      "cheese"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "bread and cheese → 面包和奶酪；cheese 中间连续两个 e。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:city",
+    "word": "city",
+    "meaning": "n. 城市",
+    "spoken": "city",
+    "phonetic": "",
+    "forms": [
+      "city"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "city centre → 市中心；city 的复数 cities 要改 y 为 ies。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:clay",
+    "word": "clay",
+    "meaning": "n. 黏土",
+    "spoken": "clay",
+    "phonetic": "",
+    "forms": [
+      "clay"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "made of clay → 黏土制成；clay 与 lay 比较时注意开头的 c。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:communication",
+    "word": "communication",
+    "meaning": "n. 交流；通信",
+    "spoken": "communication",
+    "phonetic": "",
+    "forms": [
+      "communication"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "communicate → communication；communication 有连续两个 m，末尾是 -tion。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:competition",
+    "word": "competition",
+    "meaning": "n. 竞争；比赛",
+    "spoken": "competition",
+    "phonetic": "",
+    "forms": [
+      "competition"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "enter a competition → 参加比赛；compete 与 competition 组成词族。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:culture",
+    "word": "culture",
+    "meaning": "n. 文化",
+    "spoken": "culture",
+    "phonetic": "",
+    "forms": [
+      "culture"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      3,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "local culture → 当地文化；不要把 culture 与 cultural（文化的）混写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:dance",
+    "word": "dance",
+    "meaning": "n. 舞蹈；v. 跳舞",
+    "spoken": "dance",
+    "phonetic": "",
+    "forms": [
+      "dance"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a dance class → 舞蹈课；dance 可作名词，也可作动词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:danger",
+    "word": "Danger",
+    "meaning": "n. 危险",
+    "spoken": "Danger",
+    "phonetic": "",
+    "forms": [
+      "Danger"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "in danger → 处于危险中；danger 与 dangerous（危险的）组成词族。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:deposit",
+    "word": "deposit",
+    "meaning": "n. 押金，定金；v. 存放",
+    "spoken": "deposit",
+    "phonetic": "",
+    "forms": [
+      "deposit"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "pay a deposit → 付押金；常和 rent（租金）在住宿咨询中一起出现。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:depth",
+    "word": "depth",
+    "meaning": "n. 深度",
+    "spoken": "depth",
+    "phonetic": "",
+    "forms": [
+      "depth"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "the depth of the lake → 湖的深度；deep（深的）对应 depth（深度）。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:deserts",
+    "word": "deserts",
+    "meaning": "n. 沙漠",
+    "spoken": "deserts",
+    "phonetic": "",
+    "forms": [
+      "deserts"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "hot deserts → 炎热的沙漠；保留复数 -s，别误写成 desserts。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:diary",
+    "word": "diary",
+    "meaning": "n. 日记",
+    "spoken": "diary",
+    "phonetic": "",
+    "forms": [
+      "diary"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "keep a diary → 写日记；diary（日记）与 dairy（乳制品的）字母顺序不同。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:diet",
+    "word": "diet",
+    "meaning": "n. 饮食",
+    "spoken": "diet",
+    "phonetic": "",
+    "forms": [
+      "diet"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a balanced diet → 均衡饮食；diet 不只表示减肥。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:dinner",
+    "word": "dinner",
+    "meaning": "n. 晚餐",
+    "spoken": "dinner",
+    "phonetic": "",
+    "forms": [
+      "dinner"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "have dinner → 吃晚饭；dinner 中间两个 n。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:discount",
+    "word": "discount",
+    "meaning": "n. 折扣",
+    "spoken": "discount",
+    "phonetic": "",
+    "forms": [
+      "discount"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a student discount → 学生折扣；问价格时连同 discount 一起听。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:drive",
+    "word": "drive",
+    "meaning": "v. 驾驶，开车",
+    "spoken": "drive",
+    "phonetic": "",
+    "forms": [
+      "drive"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "learn to drive → 学开车；driver 是人，drive 是动作。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:driver",
+    "word": "driver",
+    "meaning": "n. 司机",
+    "spoken": "driver",
+    "phonetic": "",
+    "forms": [
+      "driver"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a bus driver → 公交车司机；drive 加 -r，注意保留 e。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:emotion",
+    "word": "emotion",
+    "meaning": "n. 情感；情绪",
+    "spoken": "emotion",
+    "phonetic": "",
+    "forms": [
+      "emotion"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "express emotion → 表达情感；emotional 是对应的形容词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:expensive",
+    "word": "expensive",
+    "meaning": "adj. 昂贵的",
+    "spoken": "expensive",
+    "phonetic": "",
+    "forms": [
+      "expensive"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "expensive equipment → 昂贵的设备；与 cheap（便宜的）对照记。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:film",
+    "word": "film",
+    "meaning": "n. 电影；薄膜；胶片",
+    "spoken": "film",
+    "phonetic": "",
+    "forms": [
+      "film"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "watch a film → 看电影；film 也可指薄膜，按场景选义。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:fireworks",
+    "word": "fireworks",
+    "meaning": "n. 烟花",
+    "spoken": "fireworks",
+    "phonetic": "",
+    "forms": [
+      "fireworks"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a fireworks display → 烟花表演；fire + works，末尾有 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:fishing",
+    "word": "fishing",
+    "meaning": "n. 钓鱼；捕鱼",
+    "spoken": "fishing",
+    "phonetic": "",
+    "forms": [
+      "fishing"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "go fishing → 去钓鱼；fish 加 -ing，不双写 h。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:forest",
+    "word": "forest",
+    "meaning": "n. 森林",
+    "spoken": "forest",
+    "phonetic": "",
+    "forms": [
+      "forest"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a tropical forest → 热带森林；不要自行把单数改成 forests。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:frozen",
+    "word": "frozen",
+    "meaning": "adj. 冷冻的；结冰的",
+    "spoken": "frozen",
+    "phonetic": "",
+    "forms": [
+      "frozen"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "frozen food → 冷冻食品；freeze、froze、frozen 作为词族一起记。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:gender",
+    "word": "Gender",
+    "meaning": "n. 性别",
+    "spoken": "Gender",
+    "phonetic": "",
+    "forms": [
+      "Gender"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "gender differences → 性别差异；gender 不要与 general 混淆。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:genetic",
+    "word": "genetic",
+    "meaning": "adj. 基因的；遗传的",
+    "spoken": "genetic",
+    "phonetic": "",
+    "forms": [
+      "genetic"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "genetic information → 遗传信息；与 gene（基因）组成词族。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:guide",
+    "word": "guide",
+    "meaning": "n. 导游；指南；v. 引导",
+    "spoken": "guide",
+    "phonetic": "",
+    "forms": [
+      "guide"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a tour guide → 导游；guide 里的 u 不要漏写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:hair",
+    "word": "hair",
+    "meaning": "n. 头发；毛发",
+    "spoken": "hair",
+    "phonetic": "",
+    "forms": [
+      "hair"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "long hair → 长发；泛指头发时通常用不可数 hair。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:headaches",
+    "word": "headaches",
+    "meaning": "n. 头痛；麻烦事",
+    "spoken": "headaches",
+    "phonetic": "",
+    "forms": [
+      "headaches"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "frequent headaches → 经常头痛；head + aches，注意复数词尾。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:humans",
+    "word": "humans",
+    "meaning": "n. 人类",
+    "spoken": "humans",
+    "phonetic": "",
+    "forms": [
+      "humans"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "humans and animals → 人类与动物；human 的复数直接加 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:ice",
+    "word": "ice",
+    "meaning": "n. 冰",
+    "spoken": "ice",
+    "phonetic": "",
+    "forms": [
+      "ice"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "ice cream → 冰淇淋；ice 与 eyes 发音不同，注意词尾清浊。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:income",
+    "word": "income",
+    "meaning": "n. 收入",
+    "spoken": "income",
+    "phonetic": "",
+    "forms": [
+      "income"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "annual income → 年收入；income 是收入，cost 是成本。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:information",
+    "word": "information",
+    "meaning": "n. 信息",
+    "spoken": "information",
+    "phonetic": "",
+    "forms": [
+      "information"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "useful information → 有用的信息；不可数，不写 informations。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:internet",
+    "word": "internet",
+    "meaning": "n. 互联网",
+    "spoken": "internet",
+    "phonetic": "",
+    "forms": [
+      "internet"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      3
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "on the internet → 在互联网上；中间写 inter + net。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:july",
+    "word": "July",
+    "meaning": "n. 七月",
+    "spoken": "July",
+    "phonetic": "",
+    "forms": [
+      "July"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "July → 七月；首字母大写；与 June（六月）分别听清。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:lake",
+    "word": "lake",
+    "meaning": "n. 湖",
+    "spoken": "lake",
+    "phonetic": "",
+    "forms": [
+      "lake"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "by the lake → 在湖边；lake 与 late 只差一个辅音。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:language",
+    "word": "language",
+    "meaning": "n. 语言",
+    "spoken": "language",
+    "phonetic": "",
+    "forms": [
+      "language"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a language course → 语言课程；language 中间是 -gua-。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:learning",
+    "word": "learning",
+    "meaning": "n. 学习",
+    "spoken": "learning",
+    "phonetic": "",
+    "forms": [
+      "learning"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "distance learning → 远程学习；learn 加 -ing。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:meat",
+    "word": "meat",
+    "meaning": "n. 肉",
+    "spoken": "meat",
+    "phonetic": "",
+    "forms": [
+      "meat"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "red meat → 红肉；meat 与 meet 发音相同，靠语境判断。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:milk",
+    "word": "milk",
+    "meaning": "n. 牛奶",
+    "spoken": "milk",
+    "phonetic": "",
+    "forms": [
+      "milk"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "milk and cheese → 牛奶和奶酪；milk 通常不可数。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:mountains",
+    "word": "mountains",
+    "meaning": "n. 山；山脉",
+    "spoken": "mountains",
+    "phonetic": "",
+    "forms": [
+      "mountains"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "in the mountains → 在山区；mountain 的复数保留 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:movement",
+    "word": "movement",
+    "meaning": "n. 运动；移动",
+    "spoken": "movement",
+    "phonetic": "",
+    "forms": [
+      "movement"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "move → movement：移动 → 移动或运动；加 -ment 时保留 e。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:mud",
+    "word": "mud",
+    "meaning": "n. 泥",
+    "spoken": "mud",
+    "phonetic": "",
+    "forms": [
+      "mud"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "covered in mud → 沾满泥；mud 不可数，muddy 是形容词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:museums",
+    "word": "museums",
+    "meaning": "n. 博物馆",
+    "spoken": "museums",
+    "phonetic": "",
+    "forms": [
+      "museums"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "local museums → 当地博物馆；museum 直接加 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:natural",
+    "word": "natural",
+    "meaning": "adj. 自然的；天然的",
+    "spoken": "natural",
+    "phonetic": "",
+    "forms": [
+      "natural"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "natural resources → 自然资源；nature 与 natural 作为词族记忆。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:number",
+    "word": "number",
+    "meaning": "n. 数字；号码；数量",
+    "spoken": "number",
+    "phonetic": "",
+    "forms": [
+      "number"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a phone number → 电话号码；a number of 后常接复数名词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:nurse",
+    "word": "nurse",
+    "meaning": "n. 护士",
+    "spoken": "nurse",
+    "phonetic": "",
+    "forms": [
+      "nurse"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a qualified nurse → 合格护士；nurse 的词尾是 -se。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:ocean",
+    "word": "ocean",
+    "meaning": "n. 海洋",
+    "spoken": "ocean",
+    "phonetic": "",
+    "forms": [
+      "ocean"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "ocean currents → 洋流；ocean 中间是 -cea-。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:oil",
+    "word": "oil",
+    "meaning": "n. 油；石油",
+    "spoken": "oil",
+    "phonetic": "",
+    "forms": [
+      "oil"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "oil production → 石油生产；oil 也可指食用油。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:outside",
+    "word": "outside",
+    "meaning": "adv. 在外面；n. 外面；adj. 外面的",
+    "spoken": "outside",
+    "phonetic": "",
+    "forms": [
+      "outside"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "wait outside → 在外面等；outside = out + side，inside 是对照词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:photo",
+    "word": "photo",
+    "meaning": "n. 照片",
+    "spoken": "photo",
+    "phonetic": "",
+    "forms": [
+      "photo"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a passport photo → 护照照片；photo 是 photograph 的常用缩略形式。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:post office",
+    "word": "Post office",
+    "meaning": "n. 邮局",
+    "spoken": "Post office",
+    "phonetic": "",
+    "forms": [
+      "Post office"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "at the post office → 在邮局；两个词，office 中间两个 f。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:rats",
+    "word": "rats",
+    "meaning": "n. 老鼠",
+    "spoken": "rats",
+    "phonetic": "",
+    "forms": [
+      "rats"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "rats and mice → 大鼠与小鼠；rat 的复数直接加 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:reading",
+    "word": "reading",
+    "meaning": "n. 阅读",
+    "spoken": "reading",
+    "phonetic": "",
+    "forms": [
+      "reading"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      3,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "reading skills → 阅读能力；read 加 -ing。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:reasons",
+    "word": "reasons",
+    "meaning": "n. 原因",
+    "spoken": "reasons",
+    "phonetic": "",
+    "forms": [
+      "reasons"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "reasons for the change → 改变的原因；reason 的复数保留 s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:rivers",
+    "word": "rivers",
+    "meaning": "n. 河流",
+    "spoken": "rivers",
+    "phonetic": "",
+    "forms": [
+      "rivers"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "polluted rivers → 受污染的河流；river + s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:rocks",
+    "word": "rocks",
+    "meaning": "n. 岩石",
+    "spoken": "rocks",
+    "phonetic": "",
+    "forms": [
+      "rocks"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "rocks and soil → 岩石与土壤；注意复数词尾 -ks。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:sailing",
+    "word": "sailing",
+    "meaning": "n. 航行；帆船运动",
+    "spoken": "sailing",
+    "phonetic": "",
+    "forms": [
+      "sailing"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "go sailing → 去进行帆船运动；sail 加 -ing 不双写 l。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:sales",
+    "word": "sales",
+    "meaning": "n. 销售；销售额",
+    "spoken": "sales",
+    "phonetic": "",
+    "forms": [
+      "sales"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "sales figures → 销售数据；sale 加 s，常用复数表示销售额。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:saturday",
+    "word": "Saturday",
+    "meaning": "n. 星期六",
+    "spoken": "Saturday",
+    "phonetic": "",
+    "forms": [
+      "Saturday"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Saturday → 星期六；首字母大写，拼写里有 -ur-。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:shipping",
+    "word": "shipping",
+    "meaning": "n. 航运；运输",
+    "spoken": "shipping",
+    "phonetic": "",
+    "forms": [
+      "shipping"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "shipping costs → 运输费用；ship 加 -ing 双写 p。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:shower",
+    "word": "shower",
+    "meaning": "n. 淋浴；阵雨",
+    "spoken": "shower",
+    "phonetic": "",
+    "forms": [
+      "shower"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "take a shower → 淋浴；a rain shower → 一阵雨。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:size",
+    "word": "size",
+    "meaning": "n. 大小；规模",
+    "spoken": "size",
+    "phonetic": "",
+    "forms": [
+      "size"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "the size of the room → 房间的大小；size 结尾有 e。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:spices",
+    "word": "spices",
+    "meaning": "n. 香料",
+    "spoken": "spices",
+    "phonetic": "",
+    "forms": [
+      "spices"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "add spices → 加香料；spice 直接加复数 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:spring",
+    "word": "spring",
+    "meaning": "n. 春天（时间类）",
+    "spoken": "spring",
+    "phonetic": "",
+    "forms": [
+      "spring"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": true,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "in spring → 在春天；时间类里取春季义，不是弹簧或泉水义。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:square",
+    "word": "square",
+    "meaning": "n. 广场；正方形；adj. 正方形的",
+    "spoken": "square",
+    "phonetic": "",
+    "forms": [
+      "square"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a town square → 城镇广场；square 也可指正方形。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:storage",
+    "word": "storage",
+    "meaning": "n. 储存；存储空间",
+    "spoken": "storage",
+    "phonetic": "",
+    "forms": [
+      "storage"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "storage space → 储存空间；store 与 storage 组成词族。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:storms",
+    "word": "storms",
+    "meaning": "n. 暴风雨",
+    "spoken": "storms",
+    "phonetic": "",
+    "forms": [
+      "storms"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "severe storms → 强烈的暴风雨；不要漏掉 storm 后面的 -s。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:support",
+    "word": "support",
+    "meaning": "v. 支持；维护；n. 支持",
+    "spoken": "support",
+    "phonetic": "",
+    "forms": [
+      "support"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "financial support → 财政支持；support 中间两个 p。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:taste",
+    "word": "taste",
+    "meaning": "n. 味道；品味；v. 品尝",
+    "spoken": "taste",
+    "phonetic": "",
+    "forms": [
+      "taste"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a sweet taste → 甜味；taste the food → 尝尝食物。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:teeth",
+    "word": "teeth",
+    "meaning": "n. 牙齿",
+    "spoken": "teeth",
+    "phonetic": "",
+    "forms": [
+      "teeth"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "brush your teeth → 刷牙；tooth 的复数是 teeth。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:theater",
+    "word": "theater",
+    "meaning": "n. 剧院；戏剧",
+    "spoken": "theater",
+    "phonetic": "",
+    "forms": [
+      "theater"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "theater / theatre：美式、英式拼写不同；此词卡保留原词表 theater。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:top",
+    "word": "top",
+    "meaning": "n. 顶部；adj. 顶部的，最高的",
+    "spoken": "top",
+    "phonetic": "",
+    "forms": [
+      "top"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "at the top → 在顶部；top floor → 顶层。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:traditional",
+    "word": "traditional",
+    "meaning": "adj. 传统的",
+    "spoken": "traditional",
+    "phonetic": "",
+    "forms": [
+      "traditional"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "traditional food → 传统食物；tradition + -al。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:traffic",
+    "word": "traffic",
+    "meaning": "n. 交通；车流量",
+    "spoken": "traffic",
+    "phonetic": "",
+    "forms": [
+      "traffic"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      2,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "heavy traffic → 交通拥堵；traffic 通常不可数，中间两个 f。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:transportation",
+    "word": "Transportation",
+    "meaning": "n. 交通；运输",
+    "spoken": "Transportation",
+    "phonetic": "",
+    "forms": [
+      "Transportation"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "public transportation → 公共交通；与 transport 同主题，但拼写更长。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:travel",
+    "word": "travel",
+    "meaning": "n. 旅行；v. 旅行，出行",
+    "spoken": "travel",
+    "phonetic": "",
+    "forms": [
+      "travel"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "travel insurance → 旅行保险；travel 可作动词，也可泛指旅行活动。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:trust",
+    "word": "trust",
+    "meaning": "n. 信任；v. 信任",
+    "spoken": "trust",
+    "phonetic": "",
+    "forms": [
+      "trust"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "build trust → 建立信任；trust 既可作名词也可作动词。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:uniform",
+    "word": "uniform",
+    "meaning": "n. 制服",
+    "spoken": "uniform",
+    "phonetic": "",
+    "forms": [
+      "uniform"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "wear a uniform → 穿制服；a school uniform → 校服。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:variety",
+    "word": "variety",
+    "meaning": "n. 多样性；品种",
+    "spoken": "variety",
+    "phonetic": "",
+    "forms": [
+      "variety"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "a variety of activities → 多种活动；variety 结尾是 -iety。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:walking",
+    "word": "walking",
+    "meaning": "n. 步行，散步",
+    "spoken": "walking",
+    "phonetic": "",
+    "forms": [
+      "walking"
+    ],
+    "articles": [
+      "九分学长 · 听力填空词表"
+    ],
+    "topic": "listening",
+    "category": "常规",
+    "frequency": 3,
+    "parts": [
+      1,
+      4
+    ],
+    "count": 1,
+    "defaultStar": false,
+    "meaningSupplemented": false,
+    "sourceDate": "2026-11-05",
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "walking distance → 步行距离；walk 加 -ing，字母 l 保留。"
+    },
+    "synonyms": ""
+  }
+]
