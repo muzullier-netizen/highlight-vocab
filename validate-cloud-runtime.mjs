@@ -21,7 +21,7 @@ async function browser(storage=new Map(),id=UID){
    if(loseResponse){loseResponse=false;throw Error('NetworkError fixture: response lost after accepted write')}
    return {data:{...cp(cloud),conflict:false}};
  }};
- const extra={dictation:true,indexedDB,localStorage,speechSynthesis:speech,structuredClone,atob,Uint8Array,Blob,crypto:webcrypto,navigator:{onLine:true},setInterval(){},clearTimeout(){},SpeechSynthesisUtterance:class{},window:{indexedDB,speechSynthesis:speech,addEventListener(){},supabase:{createClient:()=>client},VOCAB_CLOUD_CONFIG:{url:'https://test.supabase.co',publishableKey:'sb_publishable_test',bucket:'test-private'}}};
+ const extra={dictation:true,indexedDB,localStorage,speechSynthesis:speech,structuredClone,atob,Uint8Array,Blob,crypto:webcrypto,navigator:{onLine:true},setInterval(){},clearInterval(){},clearTimeout(){},SpeechSynthesisUtterance:class{},window:{indexedDB,speechSynthesis:speech,addEventListener(){},supabase:{createClient:()=>client},VOCAB_CLOUD_CONFIG:{url:'https://test.supabase.co',publishableKey:'sb_publishable_test',bucket:'test-private'}}};
  const s=await setup('#listening',extra);await new Promise(r=>setTimeout(r,0));
  vm.runInContext(fs.readFileSync('sync-model.js','utf8'),s.env);vm.runInContext(fs.readFileSync('cloud-sync.js','utf8'),s.env);await new Promise(r=>setTimeout(r,0));
  return {...s,storage,audio,sync:()=>s.env.window.CloudSync.sync()};

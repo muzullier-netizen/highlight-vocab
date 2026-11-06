@@ -3,13 +3,17 @@
   const $=id=>document.getElementById(id),M=globalThis.SyncModel,C=window.VOCAB_CLOUD_CONFIG||{};
   const OWNER='translation-sync-owner-v1',META='translation-cloud-meta-v1:';
   let client=null,user=null,meta=null,busy=false,applying=false,timer,again=false,stopped=false,epoch=0;
+  let pendingEmail='',authBusy=false,resendAt=0,resendTimer;
   const status=(s,error=false)=>{$('cloudStatus').textContent=s;$('cloudStatus').dataset.error=String(error)};
+  function refreshSend(){const seconds=Math.max(0,Math.ceil((resendAt-Date.now())/1000));$('cloudSendLink').disabled=authBusy||seconds>0;$('cloudSendLink').textContent=seconds?`${seconds} 秒后可重发`:pendingEmail?'重新发送验证码':'发送验证码';if(!seconds){clearInterval(resendTimer);resendTimer=null}}
+  function resetLogin(){pendingEmail='';$('cloudCode').value='';$('cloudVerify').hidden=true;$('cloudEmail').readOnly=false;$('cloudVerifyButton').disabled=false;$('cloudChangeEmail').disabled=false;refreshSend()}
   const metadataKey=()=>META+user.id;
   const readMeta=()=>{const raw=localStorage.getItem(metadataKey());if(!raw)return {base:null,revision:0,pending:null};const d=JSON.parse(raw);if(!d||d.version!==1)throw Error('同步记录格式不正确，请导出本机进度后联系维护者。');return d};
   const writeMeta=()=>localStorage.setItem(metadataKey(),JSON.stringify({...meta,version:1}));
   const alive=token=>user&&token===epoch&&!stopped;
   function friendly(error){
     const message=String(error?.message||error||'未知错误');
+    if(error?.code==='otp_expired'||/token.*expired|invalid.*token|token.*invalid/i.test(message))return '验证码不正确或已过期，请检查最新邮件中的验证码，或重新发送。';
     if(/Failed to fetch|network|NetworkError|fetch failed/i.test(message))return '暂时无法连接云端，本机学习记录仍保留；联网后点击“立即同步”。';
     if(/vocab_sync|schema cache|PGRST202|function.*not.*exist/i.test(message))return '云端同步表尚未配置，请先完成 Supabase 项目初始化。';
     if(/email.*not.*authorized|SMTP|Email address.*not authorized|email.*rate|rate.*limit/i.test(message))return '登录邮件发送受限，请检查邮箱拼写，稍后重试或检查 Supabase 邮件配置。';
@@ -108,6 +112,7 @@
     epoch++;clearTimeout(timer);user=session?.user||null;stopped=false;
     $('cloudLogin').hidden=!!user;$('cloudAccount').hidden=!user;
     if(!user){status('未登录 · 进度保存在本机');return}
+    resetLogin();
     $('cloudEmailLabel').textContent=user.email||'已登录账号';
     const owner=localStorage.getItem(OWNER);
     if(owner&&owner!==user.id){stopped=true;status('此浏览器保留了另一账号的本机记录。请换用独立浏览器配置登录，避免混合进度。',true);return}
@@ -128,9 +133,21 @@
     const {data,error}=await client.auth.getSession();if(error)throw error;await setSession(data.session);
     setInterval(()=>{if(document.visibilityState!=='hidden')schedule(0)},30000);
   }
-  $('cloudLogin').onsubmit=async e=>{e.preventDefault();if(!client)return;const button=$('cloudSendLink');button.disabled=true;
-    try{const callback=new URL(location.href);callback.search='';callback.hash='';const {error}=await client.auth.signInWithOtp({email:$('cloudEmail').value.trim(),options:{emailRedirectTo:callback.href,shouldCreateUser:true}});if(error)throw error;status('登录链接已发送。请在当前这台电脑的同一浏览器打开邮件链接，完成后会自动合并记录。')}catch(error){status(friendly(error),true)}finally{button.disabled=false}
+  $('cloudLogin').onsubmit=async e=>{e.preventDefault();if(!client||authBusy||Date.now()<resendAt)return;
+    const email=$('cloudEmail').value.trim();if(!email||!$('cloudEmail').checkValidity()){$('cloudEmail').reportValidity();return}
+    authBusy=true;$('cloudEmail').readOnly=true;$('cloudChangeEmail').disabled=true;refreshSend();
+    try{const callback=new URL(location.href);callback.search='';callback.hash='';const {error}=await client.auth.signInWithOtp({email,options:{emailRedirectTo:callback.href,shouldCreateUser:true}});if(error)throw error;
+      pendingEmail=email;$('cloudCode').value='';$('cloudVerify').hidden=false;$('cloudOtpEmail').textContent=email;resendAt=Date.now()+60000;clearInterval(resendTimer);resendTimer=setInterval(refreshSend,1000);
+      status('登录邮件已发送，请把最新邮件中的数字验证码填在下方。登录成功后自动同步。');$('cloudCode').focus();
+    }catch(error){status(friendly(error),true)}finally{authBusy=false;$('cloudEmail').readOnly=!!pendingEmail;$('cloudChangeEmail').disabled=false;refreshSend()}
   };
+  $('cloudVerify').onsubmit=async e=>{e.preventDefault();if(!client||!pendingEmail||authBusy)return;
+    const token=$('cloudCode').value.replace(/\s/g,'');if(!/^\d{6,10}$/.test(token)){status('请输入邮件中的完整数字验证码（6–10 位）。',true);$('cloudCode').focus();return}
+    authBusy=true;$('cloudVerifyButton').disabled=true;$('cloudChangeEmail').disabled=true;refreshSend();
+    try{const {data,error}=await client.auth.verifyOtp({email:pendingEmail,token,type:'email'});if(error)throw error;if(!data?.session)throw Error('暂未取得登录状态，请重新验证。');await setSession(data.session);
+    }catch(error){status(friendly(error),true)}finally{authBusy=false;$('cloudVerifyButton').disabled=false;$('cloudChangeEmail').disabled=false;refreshSend()}
+  };
+  $('cloudChangeEmail').onclick=()=>{if(authBusy)return;resetLogin();status('请输入要同步的邮箱，再发送验证码。');$('cloudEmail').focus()};
   $('cloudSyncNow').onclick=()=>schedule(0);
   $('cloudSignOut').onclick=async()=>{
     stopped=true;epoch++;clearTimeout(timer);try{const {error}=await client.auth.signOut({scope:'local'});if(error)throw error;user=null;$('cloudLogin').hidden=false;$('cloudAccount').hidden=true;status('已退出同步账号 · 本机学习记录仍保留')}catch(error){status(friendly(error),true)}

@@ -1,8 +1,12 @@
+## 2026-11-06：邮箱验证码入口
+
+验证码登录使用 signInWithOtp + verifyOtp(type: email)，保留既有账号、会话存储与同步模型。邮件模板需在 Supabase Authentication → Email Templates 中，将 Magic Link 和 Confirm signup 的正文都改为包含 `{{ .Token }}` 的数字验证码邮件，不再使用 `{{ .ConfirmationURL }}`。模板未切换前保留原登录链接兼容路径。验证码仅在输入框内暂存，登录后清空，不写入本地进度或日志。
+
 # 拾词：GitHub Pages 版
 
 ## 2026-11-05：Supabase 多设备同步
 
-仍使用 https://muzullier-netizen.github.io/highlight-vocab/ 。页面顶部「云端同步」输入邮箱并发送登录链接，在当前电脑同一浏览器打开邮件即可登录；在其他电脑用同一个邮箱重复登录。离开前确认显示「已同步」。
+仍使用 https://muzullier-netizen.github.io/highlight-vocab/ 。页面顶部「云端同步」输入邮箱发送验证码，在原页面填入最新邮件的数字验证码后登录；其他设备用同一个邮箱分别获取验证码登录。首次获取后 60 秒可重发。已有登录状态继续保留。离开前确认显示「已同步」。
 
 同步范围：三个词本的熟悉度、到期时间、重点与排除标记、本轮位置、三种拼写模式的统计和草稿、自添加原句，以及导入的原录音。内置词库与剑雅短句随网站发布，不需要重复上传。
 
@@ -83,4 +87,3 @@
 
 ## 词汇统计
 原文件不保存累计高亮次数。只有 mutation/mutations 和 reptile/reptiles 各两条记录可确认并合并；其余不能推断实际高亮次数。
-
