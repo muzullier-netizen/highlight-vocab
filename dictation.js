@@ -117,11 +117,15 @@
     $('dictationPrompt').textContent=item?(item.c?markedSentence(item.c.sentence).masked:item.w.category==='数值'?'请将听到的数字写成英文单词。':'先播放发音，再输入单词或短语。'):mode()==='sentence'&&!clips.length?'请展开上方“原题资料与换设备续学”，导入九分学长原录音、原句和时间段。':d.wrongOnly?'当前筛选中没有待重练的词。':mode()==='synthetic'&&!r.ids.length?'请放宽 Part、考频或搜索条件，也可添加已核对的原句。':'可调整筛选，或切换其他练习方式。';
     $('playDictation').disabled=!item;$('dictationForm').hidden=!item;$('showSpellingAnswer').disabled=!item;$('nextSpelling').disabled=!item;$('restartDictation').hidden=!!item;
     if(key!==lastCard){stop();lastCard=key;$('spellingInput').value=r.draft||'';$('spellingFeedback').textContent=r.submitted?'此词已作答，可重听、重新输入或进入下一词。':'';$('audioStatus').textContent='';$('dictationSolution').hidden=true;for(const id of ['spellingExpected','dictationTranscript','dictationMeaning'])$(id).textContent=''}
-    $('checkSpelling').disabled=!!r.submitted;$('retrySpelling').hidden=!r.submitted;$('nextSpelling').textContent=r.submitted?'下一词（空格） →':'跳过此词';stats();
+    $('checkSpelling').disabled=!!r.submitted;$('retrySpelling').hidden=!r.submitted;if(!r.submitted)$('nextSpelling').textContent='跳过此词';
+    else if(r.retryOnAdvance)$('nextSpelling').textContent='重拼一次（空格）';
+    else $('nextSpelling').textContent='下一词（空格） →';
+    stats();
   }
   function record(item,correct,assisted=false){
     const {r}=round(),old=metric(item.w.id),now=Date.now();
     entries()[item.w.id]={...old,attempts:(old.attempts||0)+(assisted?0:1),correct:(old.correct||0)+(correct?1:0),wrong:(old.wrong||0)+(!correct&&!assisted?1:0),reveals:(old.reveals||0)+(assisted?1:0),firstAttempts:(old.firstAttempts||0)+(r.first?1:0),firstCorrect:(old.firstCorrect||0)+(r.first&&correct&&!r.assisted&&!assisted?1:0),needsReview:!correct||r.assisted||assisted,updated:now};
+    r.retryOnAdvance=r.first&&!correct&&!assisted;
     r.first=false;r.submitted=true;r.updated=now;persist();
   }
   function submit(e){e?.preventDefault();if(!active())return;const {r,item}=round();if(!item||r.submitted)return;const answer=$('spellingInput').value;if(!answer.trim()){ $('spellingFeedback').textContent='请先输入答案。';return }
@@ -160,7 +164,7 @@
       for(const key of ['attempts','correct','wrong','reveals','firstAttempts','firstCorrect'])if(v[key]!==undefined&&(!Number.isSafeInteger(v[key])||v[key]<0))throw Error('听写次数不正确');
       if(v.needsReview!==undefined&&typeof v.needsReview!=='boolean'||(v.firstCorrect||0)>(v.firstAttempts||0)||(v.correct||0)>(v.attempts||0))throw Error('听写统计不正确');
     }
-    for(const[type,r]of Object.entries(d.rounds))if(!['word','sentence','synthetic'].includes(type)||!plain(r)||!Array.isArray(r.ids)||r.ids.some(id=>typeof id!=='string')||!Number.isInteger(r.cursor)||r.cursor<0||r.cursor>r.ids.length||typeof r.signature!=='string'||r.updated!==undefined&&!Number.isFinite(r.updated)||r.draft!==undefined&&(typeof r.draft!=='string'||r.draft.length>500)||['submitted','assisted','first'].some(k=>r[k]!==undefined&&typeof r[k]!=='boolean'))throw Error('听写续学位置格式不正确');
+    for(const[type,r]of Object.entries(d.rounds))if(!['word','sentence','synthetic'].includes(type)||!plain(r)||!Array.isArray(r.ids)||r.ids.some(id=>typeof id!=='string')||!Number.isInteger(r.cursor)||r.cursor<0||r.cursor>r.ids.length||typeof r.signature!=='string'||r.updated!==undefined&&!Number.isFinite(r.updated)||r.draft!==undefined&&(typeof r.draft!=='string'||r.draft.length>500)||['submitted','assisted','first','retryOnAdvance'].some(k=>r[k]!==undefined&&typeof r[k]!=='boolean'))throw Error('听写续学位置格式不正确');
   }
   function mergeState(target,incoming){if(!incoming.dictation)return;validateState(incoming);if(!target.dictation){target.dictation=structuredClone(incoming.dictation);return}const a=target.dictation,b=incoming.dictation;const materials=new Map((a.materials||[]).map(c=>[c.id,c]));for(const c of b.materials||[])if(c.updated>(materials.get(c.id)?.updated||0))materials.set(c.id,checkText(c));if(materials.size>500)throw Error('合并后的原句超过 500 条。');a.materials=[...materials.values()];for(const type of ['word','sentence','synthetic']){a.stats[type]||={};for(const[id,v]of Object.entries(b.stats[type]||{}))if(v.updated>(a.stats[type][id]?.updated||0))a.stats[type][id]={...v}}for(const[type,r]of Object.entries(b.rounds))if((r.updated||0)>(a.rounds[type]?.updated||0))a.rounds[type]=structuredClone(r);if((b.updated||0)>(a.updated||0)){a.mode=b.mode;a.rate=b.rate;a.voiceURI=b.voiceURI||'';a.wrongOnly=b.wrongOnly;a.updated=b.updated}}
   function fileData(blob){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(blob)})}
@@ -187,12 +191,25 @@
   $('dictationForm').onsubmit=submit;$('playDictation').onclick=play;$('stopDictation').onclick=stop;
   $('spellingInput').oninput=()=>{if(!active())return;const {r}=round();r.draft=$('spellingInput').value.slice(0,500);r.updated=Date.now();persist()};
   $('showSpellingAnswer').onclick=()=>{const{r,item}=round();if(!item)return;const peek=!r.submitted;if(peek){r.assisted=true;record(item,false,true)}reveal(item);$('spellingFeedback').textContent=peek?'已查看答案，本题不计为首次答对。':'已展开正确答案。';render()};
-  $('retrySpelling').onclick=()=>{const {r}=round();r.submitted=false;r.draft='';lastCard='';persist();render();$('spellingInput').focus()};
+  function retrySpelling(){
+    const {r}=round();
+    r.submitted=false;
+    r.retryOnAdvance=false;
+    r.draft='';
+    r.updated=Date.now();
+    lastCard='';
+    persist();
+    render();
+    $('spellingInput').focus();
+  }
+  $('retrySpelling').onclick=retrySpelling;
   function nextSpelling(){
     const {r,item}=round();
     if(!item)return;
+    if(r.submitted&&r.retryOnAdvance){retrySpelling();return}
     stop();
     r.cursor++;
+    r.retryOnAdvance=false;
     r.submitted=false;
     r.assisted=false;
     r.first=true;
