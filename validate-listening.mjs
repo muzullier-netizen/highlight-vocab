@@ -12,18 +12,18 @@ assert(listening.every(w=>(w.frequency>=3||w.frequency===null&&w.calendar)&&w.me
 class Element{constructor(){this.value='';this.hidden=false;this.style={};this.textContent='';this.dataset={};this.children=[];this.files=[];this.checked=false;this.classList={toggle(){}}}setAttribute(){}append(x){this.children.push(x)}set innerHTML(x){this.html=x;this.children=[]}get innerHTML(){return this.html||''}click(){}focus(){}}
 const storage=new Map([['translation-active-deck','reading'],['shici-progress-v1',JSON.stringify({items:{[highlights[0].id]:{seen:true,level:2,due:0,updated:100}},days:{}})],['translation-reading-v1',JSON.stringify({items:{[reading.words[0].id]:{excluded:true,updated:100}},days:{}})]]);
 export async function setup(hash='',extras={}){
- const keyHandlers=[];
+ const keyHandlers=[], keyUpHandlers=[];
  const nodes=Object.fromEntries(ids.map(id=>[id,new Element()]));
  const tabs=['study','library','focus','excluded'].map(tab=>Object.assign(new Element(),{dataset:{tab},textContent:tab}));
  const ratings=['again','hard','good'].map(rate=>Object.assign(new Element(),{dataset:{rate}}));
  const env={console,Date,Math,JSON,Set,Number,Blob,URL,setTimeout(){},location:{hash},history:{replaceState(){}},
  window:{addEventListener(){}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},
- document:{getElementById:id=>{assert(nodes[id],`Missing ${id}`);return nodes[id]},querySelectorAll:s=>s==='[data-tab]'?tabs:s==='[data-rate]'?ratings:[],createElement:()=>new Element(),addEventListener(type,handler){if(type==='keydown')keyHandlers.push(handler)}},
+ document:{getElementById:id=>{assert(nodes[id],`Missing ${id}`);return nodes[id]},querySelectorAll:s=>s==='[data-tab]'?tabs:s==='[data-rate]'?ratings:[],createElement:()=>new Element(),addEventListener(type,handler){if(type==='keydown')keyHandlers.push(handler);if(type==='keyup')keyUpHandlers.push(handler)}},
  fetch:async file=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(file.split('?')[0],'utf8'))})};
  Object.assign(env,extras);vm.createContext(env);await vm.runInContext(fs.readFileSync('app.js','utf8'),env);
  env.window.render=()=>vm.runInContext('render()',env);env.window.validateState=s=>{env.incomingState=s;return vm.runInContext('validateState(incomingState)',env)};
  if(extras.dictation){vm.runInContext(fs.readFileSync('cambridge-sentences.js','utf8'),env);vm.runInContext(fs.readFileSync('dictation.js','utf8'),env);}
- return {nodes,tabs,ratings,env,keyHandlers,run:s=>vm.runInContext(s,env)};
+ return {nodes,tabs,ratings,env,keyHandlers,keyUpHandlers,run:s=>vm.runInContext(s,env)};
 }
 let s=await setup();assert.equal(s.run('deck'),'reading','Existing deck preference is preserved');
 assert(!s.run(`queue.some(w=>w.id===${JSON.stringify(reading.words[0].id)})`),'Existing excluded reading word stays excluded');

@@ -117,7 +117,7 @@
     $('dictationPrompt').textContent=item?(item.c?markedSentence(item.c.sentence).masked:item.w.category==='数值'?'请将听到的数字写成英文单词。':'先播放发音，再输入单词或短语。'):mode()==='sentence'&&!clips.length?'请展开上方“原题资料与换设备续学”，导入九分学长原录音、原句和时间段。':d.wrongOnly?'当前筛选中没有待重练的词。':mode()==='synthetic'&&!r.ids.length?'请放宽 Part、考频或搜索条件，也可添加已核对的原句。':'可调整筛选，或切换其他练习方式。';
     $('playDictation').disabled=!item;$('dictationForm').hidden=!item;$('showSpellingAnswer').disabled=!item;$('nextSpelling').disabled=!item;$('restartDictation').hidden=!!item;
     if(key!==lastCard){stop();lastCard=key;$('spellingInput').value=r.draft||'';$('spellingFeedback').textContent=r.submitted?'此词已作答，可重听、重新输入或进入下一词。':'';$('audioStatus').textContent='';$('dictationSolution').hidden=true;for(const id of ['spellingExpected','dictationTranscript','dictationMeaning'])$(id).textContent=''}
-    $('checkSpelling').disabled=!!r.submitted;$('retrySpelling').hidden=!r.submitted;$('nextSpelling').textContent=r.submitted?'下一词 →':'跳过此词';stats();
+    $('checkSpelling').disabled=!!r.submitted;$('retrySpelling').hidden=!r.submitted;$('nextSpelling').textContent=r.submitted?'下一词（空格） →':'跳过此词';stats();
   }
   function record(item,correct,assisted=false){
     const {r}=round(),old=metric(item.w.id),now=Date.now();
@@ -188,12 +188,32 @@
   $('spellingInput').oninput=()=>{if(!active())return;const {r}=round();r.draft=$('spellingInput').value.slice(0,500);r.updated=Date.now();persist()};
   $('showSpellingAnswer').onclick=()=>{const{r,item}=round();if(!item)return;const peek=!r.submitted;if(peek){r.assisted=true;record(item,false,true)}reveal(item);$('spellingFeedback').textContent=peek?'已查看答案，本题不计为首次答对。':'已展开正确答案。';render()};
   $('retrySpelling').onclick=()=>{const {r}=round();r.submitted=false;r.draft='';lastCard='';persist();render();$('spellingInput').focus()};
-  $('nextSpelling').onclick=()=>{const{r}=round();stop();r.cursor++;r.submitted=false;r.assisted=false;r.first=true;r.draft='';r.updated=Date.now();lastCard='';persist();render()};
+  function nextSpelling(){
+    const {r,item}=round();
+    if(!item)return;
+    stop();
+    r.cursor++;
+    r.submitted=false;
+    r.assisted=false;
+    r.first=true;
+    r.draft='';
+    r.updated=Date.now();
+    lastCard='';
+    persist();
+    render();
+    if(!$('dictationForm').hidden)$('spellingInput').focus();
+  }
+  function advanceAfterSubmit(){
+    if(!active()||$('nextSpelling').disabled||!round().r.submitted)return false;
+    nextSpelling();
+    return true;
+  }
+  $('nextSpelling').onclick=nextSpelling;
   $('restartDictation').onclick=()=>{delete data().rounds[mode()];lastCard='';persist();render()};
   $('clipAudio').onchange=()=>{if(previewUrl)URL.revokeObjectURL(previewUrl);const file=$('clipAudio').files[0];if(!file)return;previewUrl=URL.createObjectURL(file);$('clipPreview').src=previewUrl};
   $('useStartTime').onclick=()=>{$('clipStart').value=$('clipPreview').currentTime.toFixed(2)};$('useEndTime').onclick=()=>{$('clipEnd').value=$('clipPreview').currentTime.toFixed(2)};
   $('clipForm').onsubmit=async e=>{e.preventDefault();const status=$('materialStatus');try{if(!$('confirmOriginal').checked)throw Error('请先核对原题来源。');const file=$('clipAudio').files[0];if(!file)throw Error('请选择原录音文件。');const wordId=$('clipWord').value,start=+$('clipStart').value,end=+$('clipEnd').value;if(!$('clipEnd').value)throw Error('请填写句子结束时间。');if(!Number.isFinite($('clipPreview').duration))throw Error('请等待原音载入，再核对时间。');if(end>$('clipPreview').duration+.1)throw Error('结束时间超过录音长度。');const blob=new Blob([file],{type:file.type||'audio/mpeg'}),c=checkClip({id:wordId+':'+start+':'+end,wordId,source:$('clipSource').value.trim(),sentence:$('clipSentence').value.trim(),start,end,blob,updated:Date.now()});await storeClips([c]);await refreshClips();status.textContent='原题片段已保存在本浏览器。导出学习包后可带到另一台电脑。'}catch(error){status.textContent=error.message}};
   $('exportListeningPack').onclick=exportPack;$('importListeningPack').onclick=()=>$('listeningPackFile').click();$('listeningPackFile').onchange=async e=>{await importPack(e.target.files[0]);e.target.value=''};
-  window.addEventListener('pagehide',stop);window.Dictation={render,active,play,startWord:()=>setMode('word'),stop,normalize,markedSentence,validateState,mergeState,checkClip,checkText,builtInSentences,round,submit,importPack,allClips,storeClips,refreshClips,resetView:()=>{lastCard='';stop()}};
+  window.addEventListener('pagehide',stop);window.Dictation={render,active,play,advanceAfterSubmit,startWord:()=>setMode('word'),stop,normalize,markedSentence,validateState,mergeState,checkClip,checkText,builtInSentences,round,submit,importPack,allClips,storeClips,refreshClips,resetView:()=>{lastCard='';stop()}};
   render();refreshClips().catch(error=>{clipsReady=true;$('materialStatus').textContent=error.message;render()});
 })();
