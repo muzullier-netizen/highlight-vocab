@@ -39,17 +39,17 @@ function rate(r){if(!shown||!queue[cursor])return;let w=queue[cursor],p=st(w),le
 function star(id){let w=words.find(x=>x.id===id);if(!w)return;state.items[id]={...st(w),star:!starred(w),updated:Date.now()};save();render();checkpoint()}
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{checkpoint();tab=b.dataset.tab;page=0;document.querySelectorAll('[data-tab]').forEach(n=>n.classList.toggle('active',n===b));$('tabLabel').textContent=b.textContent.trim().replace('161','');if(tab==='study'){if(!resumeRound())build()}else render()});['article','mode','frequency','kind','listeningPart','listeningFrequency','listeningKind'].forEach(id=>$(id).onchange=build);$('search').oninput=build;$('reveal').onclick=flip;$('star').onclick=()=>star(queue[cursor]?.id);$('list').onclick=e=>{let b=e.target.closest('[data-star]');if(b)star(b.dataset.star);let r=e.target.closest('[data-restore]');if(r)recover(r.dataset.restore);let p=e.target.closest('[data-page]');if(p){page+=Number(p.dataset.page);render()}};document.querySelectorAll('[data-rate]').forEach(b=>b.onclick=()=>rate(b.dataset.rate));$('shuffle').onclick=()=>{let rest=queue.slice(cursor);for(let i=rest.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[rest[i],rest[j]]=[rest[j],rest[i]]}queue=[...queue.slice(0,cursor),...rest];render();checkpoint()};$('browseAll').onclick=()=>{$('mode').value='every';build()};$('speak').onclick=()=>{if(!('speechSynthesis'in window)){toast('此浏览器不支持语音朗读');return}if(!queue[cursor])return;let u=new SpeechSynthesisUtterance(queue[cursor].spoken||queue[cursor].word);u.lang='en-GB';u.rate=.85;u.onerror=()=>toast('朗读暂不可用，请检查设备语音服务');speechSynthesis.cancel();speechSynthesis.speak(u)};
 const typing=e=>['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)||e.target.isContentEditable;
-let advancingWithSpace=false;
+let handledDictationSpace=false;
 document.addEventListener('keydown',e=>{
   const dictation=window.Dictation;
   const spellingField=e.target===$('spellingInput');
   const practiceShortcut=!e.defaultPrevented&&!e.isComposing&&
     !e.ctrlKey&&!e.altKey&&!e.metaKey&&!e.shiftKey&&(!typing(e)||spellingField);
   if(e.code==='Space'){
-    if(!e.repeat)advancingWithSpace=false;
-    if(advancingWithSpace){e.preventDefault();return}
-    if(practiceShortcut&&!e.repeat&&dictation?.advanceAfterSubmit()){
-      advancingWithSpace=true;
+    if(!e.repeat)handledDictationSpace=false;
+    if(handledDictationSpace){e.preventDefault();return}
+    if(practiceShortcut&&!e.repeat&&dictation?.handleSpace(spellingField)){
+      handledDictationSpace=true;
       e.preventDefault();
       return;
     }
@@ -68,8 +68,8 @@ document.addEventListener('keydown',e=>{
 // A handled Space press must not also activate a focused button on release.
 document.addEventListener('keyup',e=>{
   if(e.code!=='Space')return;
-  if(advancingWithSpace||(!typing(e)&&tab==='study'&&!window.Dictation?.active()))e.preventDefault();
-  advancingWithSpace=false;
+  if(handledDictationSpace||(!typing(e)&&tab==='study'&&!window.Dictation?.active()))e.preventDefault();
+  handledDictationSpace=false;
 });
 $('backup').onclick=()=>{let data=JSON.stringify({type:'translation-progress',version:2,decks:{...Object.fromEntries(Object.keys(decks).map(k=>[k,readState(k)])),[deck]:state}},null,2),url=URL.createObjectURL(new Blob([data],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=`translation-progress-${day()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};$('restore').onclick=()=>$('file').click();function keyFor(d){return d==='highlight'?'shici-progress-v1':d==='listening'?'translation-listening-v1':'translation-reading-v1'}
 function readState(d){if(d===deck)return state;try{let s=JSON.parse(localStorage.getItem(keyFor(d)));if(s?.items&&s?.days)return s}catch{}return {items:{},days:{}}}

@@ -34,8 +34,24 @@ function space({repeat=false,target=s.nodes.spellingInput,isComposing=false}={})
   s.keyHandlers[0]({key:' ',code:'Space',target,repeat,isComposing,preventDefault(){blocked=true}});
   return blocked;
 }
-assert(!space(),'Space can separate words before an answer is checked');
-s.nodes.spellingInput.value='watre';s.nodes.dictationForm.onsubmit({preventDefault(){}});
+function typeSpelling(text){
+  const input=s.nodes.spellingInput;
+  input.value=text;
+  input.selectionStart=text.length;
+  input.selectionEnd=text.length;
+}
+function releaseSpace(){
+  s.keyUpHandlers[0]({code:'Space',target:s.nodes.spellingInput,preventDefault(){}});
+}
+assert(!space(),'Space does not submit an empty answer');
+typeSpelling('watre');
+const beforeCheck=s.run('window.Dictation.round().r.cursor');
+assert(space(),'First Space checks a completed word');
+assert.equal(s.run('window.Dictation.round().r.cursor'),beforeCheck);
+assert.equal(s.nodes.spellingFeedback.dataset.result,'wrong');
+assert(space({repeat:true}),'Holding Space does not trigger a retry');
+assert.equal(s.nodes.spellingInput.value,'watre');
+releaseSpace();
 assert.equal(s.run('state.dictation.stats.word["listening:water"].wrong'),1);
 s.nodes.dictationForm.onsubmit({preventDefault(){}});assert.equal(s.run('state.dictation.stats.word["listening:water"].attempts'),1,'Repeated submit cannot inflate stats');
 const wrongCursor=s.run('window.Dictation.round().r.cursor');
@@ -45,7 +61,9 @@ assert.equal(s.run('window.Dictation.round().r.cursor'),wrongCursor);
 assert.equal(s.nodes.spellingInput.value,'');
 assert(s.nodes.dictationSolution.hidden);
 s.keyUpHandlers[0]({code:'Space',target:s.nodes.spellingInput,preventDefault(){}});
-s.nodes.spellingInput.value='  WATER  ';s.nodes.dictationForm.onsubmit({preventDefault(){}});
+typeSpelling('  WATER  ');
+assert(space(),'Space checks a retry too');
+releaseSpace();
 assert.equal(s.run('state.dictation.stats.word["listening:water"].firstCorrect'),0,'Correction is not first-attempt success');assert.equal(s.run('state.dictation.stats.word["listening:water"].needsReview'),false);
 let focused=false;s.nodes.spellingInput.focus=()=>{focused=true};
 const beforeSpace=s.run('window.Dictation.round().r.cursor');
@@ -66,6 +84,16 @@ assert.equal(s.run('window.Dictation.round().item.id'),nextId,'Practice bookmark
 s.nodes.showSpellingAnswer.onclick();assert.equal(s.run(`state.dictation.stats.word[${JSON.stringify(nextId)}].reveals`),1);s.nodes.retrySpelling.onclick();s.nodes.spellingInput.value=s.run('window.Dictation.round().item.w.word');s.nodes.dictationForm.onsubmit({preventDefault(){}});assert.equal(s.run(`state.dictation.stats.word[${JSON.stringify(nextId)}].firstCorrect`),0,'Peeking cannot count as first-attempt correct');
 s.nodes.search.value='40';s.nodes.search.oninput();s.nodes.spellingInput.value='40';s.nodes.dictationForm.onsubmit({preventDefault(){}});assert.equal(s.nodes.spellingExpected.textContent,'正确答案：forty','Word spelling requires the English number');
 s.nodes.search.value='color';s.nodes.search.oninput();s.nodes.spellingInput.value='colour';s.nodes.dictationForm.onsubmit({preventDefault(){}});assert.equal(s.nodes.spellingFeedback.dataset.result,'correct','Known British spelling accepted');
+s.nodes.search.value='good map';s.nodes.search.oninput();
+typeSpelling('good');
+assert(!space(),'Space between words of a phrase remains ordinary');
+typeSpelling('good map');
+s.nodes.spellingInput.selectionStart=s.nodes.spellingInput.selectionEnd=4;
+assert(!space(),'Space inside an answer being edited remains ordinary');
+typeSpelling('good map');
+assert(space(),'Space checks a complete phrase');
+assert.equal(s.nodes.spellingFeedback.dataset.result,'correct');
+releaseSpace();
 s.nodes.search.value='';s.nodes.listeningKind.value='月份';s.nodes.listeningKind.onchange();
 const firstMonth=s.run('window.Dictation.round().item.id');
 s.nodes.spellingInput.value='wrong';s.nodes.dictationForm.onsubmit({preventDefault(){}});

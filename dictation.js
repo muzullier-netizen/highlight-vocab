@@ -220,9 +220,24 @@
     render();
     if(!$('dictationForm').hidden)$('spellingInput').focus();
   }
-  function advanceAfterSubmit(){
-    if(!active()||$('nextSpelling').disabled||!round().r.submitted)return false;
-    nextSpelling();
+  function handleSpace(fromSpellingField){
+    if(!active()||$('nextSpelling').disabled)return false;
+    const {r,item}=round();
+    if(!item)return false;
+    if(r.submitted){
+      nextSpelling();
+      return true;
+    }
+    if(!fromSpellingField)return false;
+
+    const input=$('spellingInput');
+    const answer=normalize(input.value);
+    if(!answer||input.selectionStart!==input.value.length||input.selectionEnd!==input.value.length){
+      return false;
+    }
+    // Allow ordinary spaces between the words of a phrase.
+    if(answer.split(' ').length<normalize(expected(item)).split(' ').length)return false;
+    submit();
     return true;
   }
   $('nextSpelling').onclick=nextSpelling;
@@ -231,6 +246,6 @@
   $('useStartTime').onclick=()=>{$('clipStart').value=$('clipPreview').currentTime.toFixed(2)};$('useEndTime').onclick=()=>{$('clipEnd').value=$('clipPreview').currentTime.toFixed(2)};
   $('clipForm').onsubmit=async e=>{e.preventDefault();const status=$('materialStatus');try{if(!$('confirmOriginal').checked)throw Error('请先核对原题来源。');const file=$('clipAudio').files[0];if(!file)throw Error('请选择原录音文件。');const wordId=$('clipWord').value,start=+$('clipStart').value,end=+$('clipEnd').value;if(!$('clipEnd').value)throw Error('请填写句子结束时间。');if(!Number.isFinite($('clipPreview').duration))throw Error('请等待原音载入，再核对时间。');if(end>$('clipPreview').duration+.1)throw Error('结束时间超过录音长度。');const blob=new Blob([file],{type:file.type||'audio/mpeg'}),c=checkClip({id:wordId+':'+start+':'+end,wordId,source:$('clipSource').value.trim(),sentence:$('clipSentence').value.trim(),start,end,blob,updated:Date.now()});await storeClips([c]);await refreshClips();status.textContent='原题片段已保存在本浏览器。导出学习包后可带到另一台电脑。'}catch(error){status.textContent=error.message}};
   $('exportListeningPack').onclick=exportPack;$('importListeningPack').onclick=()=>$('listeningPackFile').click();$('listeningPackFile').onchange=async e=>{await importPack(e.target.files[0]);e.target.value=''};
-  window.addEventListener('pagehide',stop);window.Dictation={render,active,play,advanceAfterSubmit,startWord:()=>setMode('word'),stop,normalize,markedSentence,validateState,mergeState,checkClip,checkText,builtInSentences,round,submit,importPack,allClips,storeClips,refreshClips,resetView:()=>{lastCard='';stop()}};
+  window.addEventListener('pagehide',stop);window.Dictation={render,active,play,handleSpace,startWord:()=>setMode('word'),stop,normalize,markedSentence,validateState,mergeState,checkClip,checkText,builtInSentences,round,submit,importPack,allClips,storeClips,refreshClips,resetView:()=>{lastCard='';stop()}};
   render();refreshClips().catch(error=>{clipsReady=true;$('materialStatus').textContent=error.message;render()});
 })();
