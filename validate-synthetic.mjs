@@ -12,7 +12,7 @@ assert.equal(s.nodes.dictationPanel.hidden,false);
 assert.equal(s.nodes.voiceSettings.hidden,false);
 const built=s.env.window.Dictation.builtInSentences();
 assert.equal(built.length,19);assert.equal(new Set(built.map(c=>c.wordId)).size,19);
-assert(s.nodes.syntheticCoverage.textContent.includes('19 / 215'));
+assert(s.nodes.syntheticCoverage.textContent.includes('19 / 230'));
 const totals=new Map();for(const row of s.env.window.CambridgeSentences){totals.set(row.book,(totals.get(row.book)||0)+row.text.split(/\s+/).length);assert(row.url.startsWith('https://'))}
 assert.equal(totals.size,11);assert([...totals.values()].every(n=>n<=25),'Keep each book excerpt brief');
 for(const c of built){s.env.window.Dictation.checkText(c);assert(c.source.includes('Test 1'));assert(c.url.startsWith('https://'));}

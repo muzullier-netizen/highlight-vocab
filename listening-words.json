@@ -315,7 +315,8 @@
       "type": "听力搭配与拼写",
       "text": "Thursday → 星期四；拼写以 Th 开头，中间有 rs，首字母大写。"
     },
-    "synonyms": ""
+    "synonyms": "",
+    "calendar": "星期"
   },
   {
     "id": "listening:wood",
@@ -1883,7 +1884,8 @@
       "type": "听力搭配与拼写",
       "text": "August → 八月；月份首字母大写，中间是 -gu-。"
     },
-    "synonyms": ""
+    "synonyms": "",
+    "calendar": "月份"
   },
   {
     "id": "listening:back",
@@ -4811,7 +4813,8 @@
       "type": "听力搭配与拼写",
       "text": "July → 七月；首字母大写；与 June（六月）分别听清。"
     },
-    "synonyms": ""
+    "synonyms": "",
+    "calendar": "月份"
   },
   {
     "id": "listening:lake",
@@ -5523,7 +5526,8 @@
       "type": "听力搭配与拼写",
       "text": "Saturday → 星期六；首字母大写，拼写里有 -ur-。"
     },
-    "synonyms": ""
+    "synonyms": "",
+    "calendar": "星期"
   },
   {
     "id": "listening:shipping",
@@ -6117,6 +6121,381 @@
     "memory": {
       "type": "听力搭配与拼写",
       "text": "walking distance → 步行距离；walk 加 -ing，字母 l 保留。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:january",
+    "word": "January",
+    "meaning": "n. 一月",
+    "spoken": "January",
+    "phonetic": "",
+    "forms": [
+      "January"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Jan-u-ary，末尾是 -ary。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:february",
+    "word": "February",
+    "meaning": "n. 二月",
+    "spoken": "February",
+    "phonetic": "",
+    "forms": [
+      "February"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Feb-ru-ary，注意 b 后面的 r。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:march",
+    "word": "March",
+    "meaning": "n. 三月",
+    "spoken": "March",
+    "phonetic": "",
+    "forms": [
+      "March"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "以 Mar- 开头，末尾是 -ch。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:april",
+    "word": "April",
+    "meaning": "n. 四月",
+    "spoken": "April",
+    "phonetic": "",
+    "forms": [
+      "April"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Apr-il，末尾是 -il。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:may",
+    "word": "May",
+    "meaning": "n. 五月",
+    "spoken": "May",
+    "phonetic": "",
+    "forms": [
+      "May"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "M-a-y，末尾是 y。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:june",
+    "word": "June",
+    "meaning": "n. 六月",
+    "spoken": "June",
+    "phonetic": "",
+    "forms": [
+      "June"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Ju-ne，末尾是 -ne。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:september",
+    "word": "September",
+    "meaning": "n. 九月",
+    "spoken": "September",
+    "phonetic": "",
+    "forms": [
+      "September"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Sep-tem-ber，开头是 Sept-。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:october",
+    "word": "October",
+    "meaning": "n. 十月",
+    "spoken": "October",
+    "phonetic": "",
+    "forms": [
+      "October"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Oc-to-ber，开头是 Oct-。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:november",
+    "word": "November",
+    "meaning": "n. 十一月",
+    "spoken": "November",
+    "phonetic": "",
+    "forms": [
+      "November"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "No-vem-ber，注意中间的 v。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:december",
+    "word": "December",
+    "meaning": "n. 十二月",
+    "spoken": "December",
+    "phonetic": "",
+    "forms": [
+      "December"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "月份",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "De-cem-ber，中间写 -cem-。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:monday",
+    "word": "Monday",
+    "meaning": "n. 星期一",
+    "spoken": "Monday",
+    "phonetic": "",
+    "forms": [
+      "Monday"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "星期",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Mon-day，开头是 Mon-。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:tuesday",
+    "word": "Tuesday",
+    "meaning": "n. 星期二",
+    "spoken": "Tuesday",
+    "phonetic": "",
+    "forms": [
+      "Tuesday"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "星期",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Tues-day，开头字母依次是 T-u-e-s。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:wednesday",
+    "word": "Wednesday",
+    "meaning": "n. 星期三",
+    "spoken": "Wednesday",
+    "phonetic": "",
+    "forms": [
+      "Wednesday"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "星期",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Wed-nes-day，拼写保留中间的 d 和 -nes-。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:friday",
+    "word": "Friday",
+    "meaning": "n. 星期五",
+    "spoken": "Friday",
+    "phonetic": "",
+    "forms": [
+      "Friday"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "星期",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Fri-day，开头是 Fri-。 首字母大写。"
+    },
+    "synonyms": ""
+  },
+  {
+    "id": "listening:sunday",
+    "word": "Sunday",
+    "meaning": "n. 星期日",
+    "spoken": "Sunday",
+    "phonetic": "",
+    "forms": [
+      "Sunday"
+    ],
+    "articles": [
+      "基础日期词汇补充"
+    ],
+    "topic": "listening",
+    "category": "时间",
+    "calendar": "星期",
+    "frequency": null,
+    "parts": [],
+    "count": 1,
+    "defaultStar": false,
+    "memory": {
+      "type": "听力搭配与拼写",
+      "text": "Sun-day，开头是 Sun-。 首字母大写。"
     },
     "synonyms": ""
   }

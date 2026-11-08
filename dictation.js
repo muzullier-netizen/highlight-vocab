@@ -3,8 +3,7 @@
   const LIMIT=25*1024*1024, PACK_LIMIT=110*1024*1024;
   const normalize=s=>String(s).normalize('NFKC').trim().replace(/\s+/g,' ').toLowerCase();
   let clips=[],clipsReady=false,dbPromise=null,lastCard='',previewUrl='',playUrl='',audio=null,playSerial=0,linkApplied=false;
-  const current=()=>queue[cursor];
-  const data=()=>state.dictation||(state.dictation={version:1,mode:'cards',rate:1,wrongOnly:false,stats:{word:{},sentence:{}},rounds:{}});
+  const data=()=>state.dictation||(state.dictation={version:1,mode:'word',rate:1,wrongOnly:false,stats:{word:{},sentence:{}},rounds:{}});
   const active=()=>deck==='listening'&&tab==='study'&&['word','sentence','synthetic'].includes(data().mode);
   const mode=()=>data().mode;
   const entries=()=>data().stats[mode()]||(data().stats[mode()]={});
@@ -67,6 +66,13 @@
     const signature=JSON.stringify([$('article').value,$('search').value,$('mode').value,$('listeningPart').value,$('listeningFrequency').value,$('listeningKind').value,d.wrongOnly,mode()!=='word'?sentencePool().map(c=>c.id+':'+c.updated).sort():null]);
     let r=d.rounds[mode()];
     if(!r||r.signature!==signature){r=d.rounds[mode()]={signature,ids:list.map(x=>x.id),cursor:0,submitted:false,assisted:false,first:true,draft:'',updated:Date.now()}}
+    // Add newly introduced dates to older rounds without moving the saved cursor.
+    if(mode()==='word'&&!r.calendarVersion){
+      const existing=new Set(r.ids);
+      const added=list.filter(({id,w})=>w.frequency===null&&w.calendar&&!existing.has(id));
+      if(added.length){r.ids.push(...added.map(({id})=>id));r.updated=Date.now()}
+      r.calendarVersion=1;
+    }
     // Keep completed positions; live exclusions and missing audio cannot re-enter practice.
     const wordMap=new Map(decks.listening.map(w=>[w.id,w]));
     const valid=id=>mode()==='word'?wordMap.has(id)&&!st(wordMap.get(id)).excluded:sentencePool().some(c=>c.id===id&&wordMap.has(c.wordId)&&!st(wordMap.get(c.wordId)).excluded);
@@ -86,12 +92,19 @@
   }
   function reveal(item){$('dictationSolution').hidden=false;$('spellingExpected').textContent='正确答案：'+expected(item);$('dictationTranscript').textContent=item.c?markedSentence(item.c.sentence).full:'';$('dictationMeaning').textContent=item.w.meaning+(item.c?' · 原句来源：'+item.c.source+(item.c.tts?' · 合成语音；设空用于词汇练习':' · '+item.c.start+'–'+item.c.end+' 秒'):'');const link=$('sentenceSourceLink');link.hidden=!item.c?.url;if(item.c?.url)link.href=item.c.url;}
   function render(){
-    const isListening=deck==='listening'&&tab==='study';$('practiceSettings').hidden=!isListening;$('dictationPanel').hidden=!active();
-    if(!isListening){if(lastCard)stop();lastCard='';return}
-    if(!linkApplied){linkApplied=true;if(location.search?.includes('practice=synthetic')){data().mode='synthetic';persist()}}
+    const isListening=deck==='listening'&&tab==='study';$('practiceSettings').hidden=!isListening;
+    if(!isListening){$('dictationPanel').hidden=true;$('studyKeyboard').hidden=false;if(lastCard)stop();lastCard='';return}
+    if(!linkApplied){
+      linkApplied=true;
+      const requestedMode=location.search?.match(/(?:^|[?&])practice=(word|synthetic)(?=&|$)/)?.[1];
+      if(requestedMode&&data().mode!==requestedMode){data().mode=requestedMode;persist()}
+    }
+    if(data().mode==='cards'&&data().updated===undefined)data().mode='word';
+    $('dictationPanel').hidden=!active();
+    $('studyKeyboard').hidden=active();
     const d=data();$('practiceMode').value=d.mode;$('playbackRate').value=String(d.rate||1);$('wrongOnly').checked=!!d.wrongOnly;$('clipCount').textContent=clips.length+' 个原题片段';
     const texts=syntheticSentences(),covered=new Set(texts.map(c=>c.wordId)).size;
-    $('syntheticCoverage').textContent=`原句合成音：${texts.length} 个练习 · 覆盖 ${covered} / ${decks.listening.length} 个高频词。未覆盖的词可先练单词拼写。`;
+    $('syntheticCoverage').textContent=`原句合成音：${texts.length} 个练习 · 覆盖 ${covered} / ${decks.listening.length} 个听力词。未覆盖的词可先练单词拼写。`;
     $('voiceSettings').hidden=mode()==='sentence'||mode()==='cards';populateVoices();
     if(!$('clipWord').children.length){for(const id of ['clipWord','ttsWord'])for(const w of decks.listening){const o=document.createElement('option');o.value=w.id;o.textContent=w.word;$(id).append(o)}}
     if(!active()){lastCard='';stop();return}
@@ -164,7 +177,11 @@
     if((data().materials||[]).length>=500)throw Error('本地原句已达到 500 条。');
     data().materials||=[];data().materials.push(c);lastCard='';persist();render();status.textContent='原句已保存，可切换到原句合成音练习。导出进度或学习包可带到另一台设备。';
   }catch(error){status.textContent=error.message}};
-  $('practiceMode').onchange=()=>{stop();data().mode=$('practiceMode').value;lastCard='';persist();window.render?.();render()};
+  function setMode(next){
+    if(deck!=='listening'||data().mode===next)return;
+    stop();data().mode=next;lastCard='';persist();window.render?.();
+  }
+  $('practiceMode').onchange=()=>setMode($('practiceMode').value);
   $('playbackRate').onchange=()=>{data().rate=+$('playbackRate').value;persist();stop()};
   $('wrongOnly').onchange=()=>{data().wrongOnly=$('wrongOnly').checked;delete data().rounds[mode()];lastCard='';persist();render()};
   $('dictationForm').onsubmit=submit;$('playDictation').onclick=play;$('stopDictation').onclick=stop;
@@ -177,6 +194,6 @@
   $('useStartTime').onclick=()=>{$('clipStart').value=$('clipPreview').currentTime.toFixed(2)};$('useEndTime').onclick=()=>{$('clipEnd').value=$('clipPreview').currentTime.toFixed(2)};
   $('clipForm').onsubmit=async e=>{e.preventDefault();const status=$('materialStatus');try{if(!$('confirmOriginal').checked)throw Error('请先核对原题来源。');const file=$('clipAudio').files[0];if(!file)throw Error('请选择原录音文件。');const wordId=$('clipWord').value,start=+$('clipStart').value,end=+$('clipEnd').value;if(!$('clipEnd').value)throw Error('请填写句子结束时间。');if(!Number.isFinite($('clipPreview').duration))throw Error('请等待原音载入，再核对时间。');if(end>$('clipPreview').duration+.1)throw Error('结束时间超过录音长度。');const blob=new Blob([file],{type:file.type||'audio/mpeg'}),c=checkClip({id:wordId+':'+start+':'+end,wordId,source:$('clipSource').value.trim(),sentence:$('clipSentence').value.trim(),start,end,blob,updated:Date.now()});await storeClips([c]);await refreshClips();status.textContent='原题片段已保存在本浏览器。导出学习包后可带到另一台电脑。'}catch(error){status.textContent=error.message}};
   $('exportListeningPack').onclick=exportPack;$('importListeningPack').onclick=()=>$('listeningPackFile').click();$('listeningPackFile').onchange=async e=>{await importPack(e.target.files[0]);e.target.value=''};
-  window.addEventListener('pagehide',stop);window.Dictation={render,active,stop,normalize,markedSentence,validateState,mergeState,checkClip,checkText,builtInSentences,round,submit,importPack,allClips,storeClips,refreshClips,resetView:()=>{lastCard='';stop()}};
+  window.addEventListener('pagehide',stop);window.Dictation={render,active,play,startWord:()=>setMode('word'),stop,normalize,markedSentence,validateState,mergeState,checkClip,checkText,builtInSentences,round,submit,importPack,allClips,storeClips,refreshClips,resetView:()=>{lastCard='';stop()}};
   render();refreshClips().catch(error=>{clipsReady=true;$('materialStatus').textContent=error.message;render()});
 })();
