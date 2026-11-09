@@ -1,6 +1,7 @@
 /* Original audio and labelled synthetic sentences use separate practice modes. */
 (() => {
   const LIMIT=25*1024*1024, PACK_LIMIT=110*1024*1024;
+  const recordedWords={'listening:garage':'audio/garage-uk.mp3'};
   const normalize=s=>String(s).normalize('NFKC').trim().replace(/\s+/g,' ').toLowerCase();
   let clips=[],clipsReady=false,dbPromise=null,lastCard='',previewUrl='',playUrl='',audio=null,playSerial=0,linkApplied=false;
   const data=()=>state.dictation||(state.dictation={version:1,mode:'word',rate:1,wrongOnly:false,stats:{word:{},sentence:{}},rounds:{}});
@@ -111,7 +112,7 @@
     for(const id of ['card','ratings','empty','exclude'])$(id).hidden=true;
     if(mode()==='sentence'&&!clipsReady){$('dictationHeading').textContent='正在读取原音资料…';$('dictationForm').hidden=true;$('playDictation').disabled=true;$('nextSpelling').disabled=true;return}
     const {r,item}=round(),key=mode()+':'+(item?.id||'empty')+':'+r.cursor+':'+r.signature;
-    $('dictationTag').textContent=mode()==='word'?'单词拼写 · 设备合成发音':mode()==='synthetic'?'剑雅原句 · 合成语音':'原句听写 · 原录音';
+    $('dictationTag').textContent=mode()==='word'?(recordedWords[item?.w.id]?'单词拼写 · 英式真人发音':'单词拼写 · 设备合成发音'):mode()==='synthetic'?'剑雅原句 · 合成语音':'原句听写 · 原录音';
     $('dictationPosition').textContent=item?`${r.cursor+1} / ${r.ids.length}`:`${r.ids.length} / ${r.ids.length}`;
     $('dictationHeading').textContent=item?'听音，写下答案':mode()==='sentence'&&!clips.length?'尚未导入原题录音':mode()==='synthetic'&&!r.ids.length?'当前筛选暂无原句练习':'本轮已完成';
     $('dictationPrompt').textContent=item?(item.c?markedSentence(item.c.sentence).masked:item.w.category==='数值'?'请将听到的数字写成英文单词。':'先播放发音，再输入单词或短语。'):mode()==='sentence'&&!clips.length?'请展开上方“原题资料与换设备续学”，导入九分学长原录音、原句和时间段。':d.wrongOnly?'当前筛选中没有待重练的词。':mode()==='synthetic'&&!r.ids.length?'请放宽 Part、考频或搜索条件，也可添加已核对的原句。':'可调整筛选，或切换其他练习方式。';
@@ -133,8 +134,28 @@
     $('spellingFeedback').textContent=correct?(r.assisted?'拼写正确。本题已查看过答案，不计为首次答对。':'拼写正确。'): `还差一点。你输入的是“${answer}”；正确答案是“${expected(item)}”。请注意字母、空格和单复数。`;
     $('spellingFeedback').dataset.result=correct?'correct':'wrong';reveal(item);render();
   }
+  function playRecordedWord(word,rate,report){
+    const src=recordedWords[word?.id];
+    if(!src)return false;
+    stop();
+    const serial=playSerial,player=new Audio(src);
+    audio=player;
+    player.playbackRate=rate;
+    const failed=()=>{
+      if(serial===playSerial)(report||toast)('真人录音暂时无法播放，请稍后重试。');
+    };
+    player.onerror=failed;
+    player.onended=()=>{
+      if(serial===playSerial)report?.('真人发音播放结束，可点击重听。');
+    };
+    report?.('正在播放英式真人发音');
+    player.play().catch(failed);
+    return true;
+  }
   async function play(){
-    if(!active())return;const {item}=round();if(!item)return;stop();const serial=playSerial;
+    if(!active())return;const {item}=round();if(!item)return;
+    if(!item.c&&playRecordedWord(item.w,data().rate||1,message=>{$('audioStatus').textContent=message}))return;
+    stop();const serial=playSerial;
     if(item.c&&!item.c.tts){
       playUrl=URL.createObjectURL(item.c.blob);audio=new Audio(playUrl);const player=audio;player.preload='auto';player.playbackRate=data().rate||1;
       player.onloadedmetadata=async()=>{if(serial!==playSerial)return;if(item.c.end>player.duration+.1){$('audioStatus').textContent='片段结束时间超过录音长度，请重新核对资料。';stop();return}player.currentTime=item.c.start;try{await player.play();if(serial===playSerial)$('audioStatus').textContent='正在播放导入的原题片段'}catch{if(serial===playSerial)$('audioStatus').textContent='播放未开始，请再次点击播放。'}};
@@ -246,6 +267,6 @@
   $('useStartTime').onclick=()=>{$('clipStart').value=$('clipPreview').currentTime.toFixed(2)};$('useEndTime').onclick=()=>{$('clipEnd').value=$('clipPreview').currentTime.toFixed(2)};
   $('clipForm').onsubmit=async e=>{e.preventDefault();const status=$('materialStatus');try{if(!$('confirmOriginal').checked)throw Error('请先核对原题来源。');const file=$('clipAudio').files[0];if(!file)throw Error('请选择原录音文件。');const wordId=$('clipWord').value,start=+$('clipStart').value,end=+$('clipEnd').value;if(!$('clipEnd').value)throw Error('请填写句子结束时间。');if(!Number.isFinite($('clipPreview').duration))throw Error('请等待原音载入，再核对时间。');if(end>$('clipPreview').duration+.1)throw Error('结束时间超过录音长度。');const blob=new Blob([file],{type:file.type||'audio/mpeg'}),c=checkClip({id:wordId+':'+start+':'+end,wordId,source:$('clipSource').value.trim(),sentence:$('clipSentence').value.trim(),start,end,blob,updated:Date.now()});await storeClips([c]);await refreshClips();status.textContent='原题片段已保存在本浏览器。导出学习包后可带到另一台电脑。'}catch(error){status.textContent=error.message}};
   $('exportListeningPack').onclick=exportPack;$('importListeningPack').onclick=()=>$('listeningPackFile').click();$('listeningPackFile').onchange=async e=>{await importPack(e.target.files[0]);e.target.value=''};
-  window.addEventListener('pagehide',stop);window.Dictation={render,active,play,handleSpace,startWord:()=>setMode('word'),stop,normalize,markedSentence,validateState,mergeState,checkClip,checkText,builtInSentences,round,submit,importPack,allClips,storeClips,refreshClips,resetView:()=>{lastCard='';stop()}};
+  window.addEventListener('pagehide',stop);window.Dictation={render,active,play,playRecordedWord,handleSpace,startWord:()=>setMode('word'),stop,normalize,markedSentence,validateState,mergeState,checkClip,checkText,builtInSentences,round,submit,importPack,allClips,storeClips,refreshClips,resetView:()=>{lastCard='';stop()}};
   render();refreshClips().catch(error=>{clipsReady=true;$('materialStatus').textContent=error.message;render()});
 })();
