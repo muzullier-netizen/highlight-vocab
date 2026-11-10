@@ -11,7 +11,8 @@ assert.equal(s.nodes.practiceMode.value,'word','Listening opens in spelling mode
 let prevented=false;
 s.keyHandlers[0]({key:'5',target:s.nodes.spellingInput,preventDefault(){prevented=true}});
 assert(prevented,'5 plays audio while the spelling field has focus');
-assert.equal(speech.last,'Water');
+assert.equal(lastAudio.src,'audio/uk/water.flac');
+assert(lastAudio.played);
 prevented=false;s.nodes.search.tagName='INPUT';
 s.keyHandlers[0]({key:'5',target:s.nodes.search,preventDefault(){prevented=true}});
 assert(!prevented,'5 remains a normal key in search');
@@ -38,10 +39,13 @@ s.nodes.speak.onclick();
 assert.equal(lastAudio.src,'audio/garage-uk.mp3');
 assert.equal(lastAudio.playbackRate,.85);
 s.nodes.practiceMode.value='word';s.nodes.practiceMode.onchange();
+s.nodes.search.value='good map';s.nodes.search.oninput();
+s.nodes.playDictation.onclick();assert.equal(speech.last,'good map','A word without a fixed recording still uses device speech');
 s.nodes.search.value='water';s.nodes.search.oninput();
 assert(s.run('window.Dictation.active()'));assert.equal(s.nodes.card.hidden,true);assert.equal(s.nodes.answer.hidden,true);assert.equal(s.nodes.dictationPanel.hidden,false);
 assert(!s.nodes.dictationPrompt.textContent.toLowerCase().includes('water'),'Question does not reveal the target word');
-s.nodes.playDictation.onclick();assert.equal(speech.last,'Water');
+s.nodes.playDictation.onclick();assert.equal(lastAudio.src,'audio/uk/water.flac');
+assert(lastAudio.played);
 s.nodes.spellingInput.tagName='INPUT';
 function space({repeat=false,target=s.nodes.spellingInput,isComposing=false}={}){
   let blocked=false;
