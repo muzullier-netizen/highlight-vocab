@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#28594c">
+  <title>雅思写作练习 · Translation</title>
+  <link rel="stylesheet" href="writing.css?v=1">
+  <script defer src="writing-topics.js?v=1"></script>
+  <script defer src="writing.js?v=1"></script>
+</head>
+<body>
+  <header>
+    <a href="./">← 返回词汇学习</a>
+    <span>IELTS Academic</span>
+  </header>
+  <main>
+    <h1>雅思写作练习</h1>
+    <p>写完后复制题目和作文，粘贴到当前聊天里批改。</p>
+    <div class="task-switch" role="group" aria-label="写作任务">
+      <button type="button" data-task="1" aria-pressed="true">Task 1 · 小作文</button>
+      <button type="button" data-task="2" aria-pressed="false">Task 2 · 大作文</button>
+    </div>
+    <div class="writing-grid">
+      <section class="panel" aria-labelledby="promptTitle">
+        <h2 id="promptTitle">写作题目</h2>
+        <p class="hint">题目来自九分学长「高频难题」专辑，英文题干已重新表述。也可以自带题目。</p>
+        <label for="topic">选择题目</label>
+        <select id="topic"></select>
+        <label for="writingPrompt">题干</label>
+        <textarea id="writingPrompt" rows="7" maxlength="8000" placeholder="粘贴完整的英文题干"></textarea>
+        <div id="chartControls">
+          <label for="writingChart">题图（可选）</label>
+          <input id="writingChart" type="file" accept="image/png,image/jpeg,image/webp">
+          <img id="chartPreview" alt="写作题目附图" hidden>
+          <p class="hint">小作文请在九分学长按题名查看原图，也可以上传截图在此预览。批改时请把原图一起上传到聊天。</p>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="draftTitle">
+        <div class="draft-head">
+          <h2 id="draftTitle">作答区</h2>
+          <output id="wordCount" for="writingDraft">0 词 · 至少 150 词</output>
+        </div>
+        <label for="writingDraft">英文作文</label>
+        <textarea id="writingDraft" rows="17" maxlength="30000" spellcheck="false" placeholder="在这里写作文"></textarea>
+        <p class="hint" id="saveStatus">草稿按题保存在当前浏览器。</p>
+        <button id="copyReview" type="button" class="primary">复制题目和作文，去聊天批改</button>
+        <p id="copyStatus" role="status"></p>
+        <label for="reviewFallback" id="reviewFallbackLabel" hidden>批改材料</label>
+        <textarea id="reviewFallback" rows="8" readonly hidden></textarea>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
