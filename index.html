@@ -1,4 +1,54 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#28594c"><title>Translation</title><link rel="stylesheet" href="style.css?v=20261105-sync1"><link rel="stylesheet" href="dictation.css?v=20261105-sync1"></head><body>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#28594c"><title>Translation</title><link rel="stylesheet" href="style.css?v=20261105-sync1"><link rel="stylesheet" href="dictation.css?v=20261105-sync1"><style>
+/* Keep the study area readable as desktop windows grow. */
+@media (min-width: 801px) {
+  :root {
+    --sidebar-width: clamp(12rem, 16vw, 17rem);
+    --page-gutter: clamp(1.25rem, 3.6vw, 4.75rem);
+    --study-width: clamp(48.75rem, 64vw, 76rem);
+    --control-text: clamp(13px, .9vw, 17px);
+    --note-text: clamp(12px, .8vw, 15px);
+  }
+
+  aside {
+    width: var(--sidebar-width);
+    padding-inline: clamp(1rem, 1.65vw, 2.25rem);
+    overflow-y: auto;
+  }
+
+  main {
+    margin-left: var(--sidebar-width);
+    padding-inline: var(--page-gutter);
+    max-width: none;
+  }
+
+  header { height: clamp(64px, 8vh, 94px); }
+  .intro { padding-block: clamp(20px, 3vh, 40px) clamp(15px, 2.4vh, 30px); }
+  .workspace { margin-top: clamp(22px, 3.2vh, 35px); }
+  .card, #ratings, .dictation-panel { max-width: var(--study-width); }
+  .card, .dictation-panel { padding-inline: clamp(24px, 3vw, 56px); }
+
+  nav button, .tools button, .deck-picker select, #listeningShortcut,
+  .filters select, .filters input, .filters button,
+  .practice-top > label, .practice-top select, .dictation-panel button,
+  #dictationForm label { font-size: var(--control-text); }
+
+  .filters input { flex: 1 1 11rem; }
+  h1 { font-size: clamp(30px, 2.1vw, 42px); }
+  #word { font-size: clamp(42px, 3vw, 62px); }
+  #dictationHeading { font-size: clamp(25px, 1.85vw, 37px); }
+  #dictationPrompt {
+    font-size: clamp(21px, 1.45vw, 29px);
+    max-width: 56ch;
+    margin-inline: auto;
+  }
+  #spellingInput { font-size: clamp(20px, 1.4vw, 28px); }
+  .spelling-feedback { font-size: var(--control-text); }
+  #audioStatus, .dictation-stats, .dictation-tip, .keyboard {
+    font-size: var(--note-text);
+  }
+}
+</style>
+</head><body>
 <aside><a class="brand" href="#">Translation<span>MY VOCABULARY</span></a><div class="label">我的学习空间</div><nav><button data-tab="study" class="active">◧　卡片学习</button><button data-tab="library">☷　全部词汇</button><button data-tab="focus">☆　重点词本</button><button data-tab="excluded">⊘　已排除（可恢复）</button></nav><div class="side-bottom"><span class="seed">✳</span><p>在读过的文字里，<br>找回熟悉的单词。</p><small>为你的 IELTS 阅读积累</small></div></aside>
 <main><header><div class="crumb">Translation 词本 <span> / </span> <b id="tabLabel">卡片学习</b></div><div class="tools"><button id="backup">导出进度 ↗</button><button id="restore">导入</button><input id="file" type="file" accept="application/json" hidden></div></header>
 <section class="intro"><div><div class="eyebrow">A LITTLE EVERY DAY</div><h1 id="heading">让高亮，变成记得。</h1><p id="subtitle">从你读过的 15 篇文章开始，一次记住一个词。</p></div><div class="date" id="date"></div></section>
