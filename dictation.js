@@ -235,6 +235,39 @@
   };
   const normalize=s=>String(s).normalize('NFKC').trim().replace(/\s+/g,' ').toLowerCase();
   let clips=[],clipsReady=false,dbPromise=null,lastCard='',previewUrl='',playUrl='',audio=null,playSerial=0,linkApplied=false;
+  let recordingDecoder;
+  const preparedRecordings=new Map();
+  function prepareRecording(src){
+    if(preparedRecordings.has(src))return preparedRecordings.get(src);
+    const pending=(async()=>{
+      const Decoder=window.AudioContext||window.webkitAudioContext;
+      recordingDecoder||=new Decoder();
+      const response=await fetch(src);
+      if(!response.ok)throw Error('录音加载失败');
+      const decoded=await recordingDecoder.decodeAudioData(await response.arrayBuffer());
+      // Put output-device startup time before the complete word, at every replay.
+      const lead=Math.ceil(decoded.sampleRate*.65),tail=Math.ceil(decoded.sampleRate*.15);
+      const frames=lead+decoded.length+tail,channels=decoded.numberOfChannels;
+      const bytes=frames*channels*2,buffer=new ArrayBuffer(44+bytes),view=new DataView(buffer);
+      const label=(offset,text)=>{for(let i=0;i<text.length;i++)view.setUint8(offset+i,text.charCodeAt(i))};
+      label(0,'RIFF');view.setUint32(4,36+bytes,true);label(8,'WAVE');label(12,'fmt ');
+      view.setUint32(16,16,true);view.setUint16(20,1,true);view.setUint16(22,channels,true);
+      view.setUint32(24,decoded.sampleRate,true);view.setUint32(28,decoded.sampleRate*channels*2,true);
+      view.setUint16(32,channels*2,true);view.setUint16(34,16,true);label(36,'data');view.setUint32(40,bytes,true);
+      for(let channel=0;channel<channels;channel++){
+        const samples=decoded.getChannelData(channel);
+        for(let i=0;i<samples.length;i++){
+          const value=Math.max(-1,Math.min(1,samples[i]));
+          view.setInt16(44+((lead+i)*channels+channel)*2,Math.round(value*(value<0?32768:32767)),true);
+        }
+      }
+      return new Blob([buffer],{type:'audio/wav'});
+    })();
+    preparedRecordings.set(src,pending);
+    if(preparedRecordings.size>16)preparedRecordings.delete(preparedRecordings.keys().next().value);
+    pending.catch(()=>{if(preparedRecordings.get(src)===pending)preparedRecordings.delete(src)});
+    return pending;
+  }
   const data=()=>state.dictation||(state.dictation={version:1,mode:'word',rate:1,wrongOnly:false,stats:{word:{},sentence:{}},rounds:{}});
   const active=()=>deck==='listening'&&tab==='study'&&['word','sentence','synthetic'].includes(data().mode);
   const mode=()=>data().mode;
@@ -369,7 +402,8 @@
     const src=recordedWords[word?.id];
     if(!src)return false;
     stop();
-    const serial=playSerial,player=new Audio(src);
+    const canPrepare=window.AudioContext||window.webkitAudioContext;
+    const serial=playSerial,player=new Audio(canPrepare?'':src);
     audio=player;
     player.playbackRate=rate;
     const failed=()=>{
@@ -379,8 +413,21 @@
     player.onended=()=>{
       if(serial===playSerial)report?.('真人发音播放结束，可点击重听。');
     };
-    report?.('正在播放英式真人发音');
-    player.play().catch(failed);
+    report?.('正在准备完整录音…');
+    const start=()=>{
+      if(serial!==playSerial)return;
+      report?.('正在播放英式真人发音');
+      player.play().catch(failed);
+    };
+    if(canPrepare){
+      prepareRecording(src).then(blob=>{
+        if(serial!==playSerial)return;
+        playUrl=URL.createObjectURL(blob);
+        player.src=playUrl;
+        player.preload='auto';
+        start();
+      }).catch(failed);
+    }else start();
     return true;
   }
   async function play(){
