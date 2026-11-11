@@ -40,7 +40,7 @@ assert.equal(lastAudio.src,'audio/garage-uk.mp3');
 assert.equal(lastAudio.playbackRate,.85);
 s.nodes.practiceMode.value='word';s.nodes.practiceMode.onchange();
 s.nodes.search.value='good map';s.nodes.search.oninput();
-s.nodes.playDictation.onclick();assert.equal(speech.last,'good map','A word without a fixed recording still uses device speech');
+s.nodes.playDictation.onclick();assert.equal(lastAudio.src,'audio/uk/good-map.mp3','A multi-word entry uses the same recording on all devices');
 s.nodes.search.value='water';s.nodes.search.oninput();
 assert(s.run('window.Dictation.active()'));assert.equal(s.nodes.card.hidden,true);assert.equal(s.nodes.answer.hidden,true);assert.equal(s.nodes.dictationPanel.hidden,false);
 assert(!s.nodes.dictationPrompt.textContent.toLowerCase().includes('water'),'Question does not reveal the target word');
