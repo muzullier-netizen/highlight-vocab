@@ -11,7 +11,7 @@ assert.equal(s.nodes.practiceMode.value,'word','Listening opens in spelling mode
 let prevented=false;
 s.keyHandlers[0]({key:'5',target:s.nodes.spellingInput,preventDefault(){prevented=true}});
 assert(prevented,'5 plays audio while the spelling field has focus');
-assert.equal(lastAudio.src,'audio/uk/water.flac');
+assert.equal(lastAudio.src,'audio/uk-ready/water.mp3');
 assert(lastAudio.played);
 prevented=false;s.nodes.search.tagName='INPUT';
 s.keyHandlers[0]({key:'5',target:s.nodes.search,preventDefault(){prevented=true}});
@@ -29,22 +29,22 @@ s.nodes.search.value='garage';s.nodes.search.oninput();
 assert.equal(s.run('window.Dictation.round().item.w.id'),'listening:garage');
 const speechBeforeGarage=speech.last;
 s.keyHandlers[0]({key:'5',target:s.nodes.spellingInput,preventDefault(){}});
-assert.equal(lastAudio.src,'audio/garage-uk.mp3');
+assert.equal(lastAudio.src,'audio/uk-ready/garage.mp3');
 assert(lastAudio.played);
 assert.equal(speech.last,speechBeforeGarage,'Garage uses the same recording regardless of device voice');
 assert.match(s.nodes.dictationTag.textContent,/真人发音/);
 assert(!s.nodes.dictationPrompt.textContent.toLowerCase().includes('garage'));
 s.nodes.practiceMode.value='card';s.nodes.practiceMode.onchange();
 s.nodes.speak.onclick();
-assert.equal(lastAudio.src,'audio/garage-uk.mp3');
+assert.equal(lastAudio.src,'audio/uk-ready/garage.mp3');
 assert.equal(lastAudio.playbackRate,.85);
 s.nodes.practiceMode.value='word';s.nodes.practiceMode.onchange();
 s.nodes.search.value='good map';s.nodes.search.oninput();
-s.nodes.playDictation.onclick();assert.equal(lastAudio.src,'audio/uk/good-map.mp3','A multi-word entry uses the same recording on all devices');
+s.nodes.playDictation.onclick();assert.equal(lastAudio.src,'audio/uk-ready/good-map.mp3','A multi-word entry uses the same recording on all devices');
 s.nodes.search.value='water';s.nodes.search.oninput();
 assert(s.run('window.Dictation.active()'));assert.equal(s.nodes.card.hidden,true);assert.equal(s.nodes.answer.hidden,true);assert.equal(s.nodes.dictationPanel.hidden,false);
 assert(!s.nodes.dictationPrompt.textContent.toLowerCase().includes('water'),'Question does not reveal the target word');
-s.nodes.playDictation.onclick();assert.equal(lastAudio.src,'audio/uk/water.flac');
+s.nodes.playDictation.onclick();assert.equal(lastAudio.src,'audio/uk-ready/water.mp3');
 assert(lastAudio.played);
 s.nodes.spellingInput.tagName='INPUT';
 function space({repeat=false,target=s.nodes.spellingInput,isComposing=false}={}){
@@ -138,61 +138,30 @@ const previous=audioRecords.size;const invalid={...payload,clips:[{...payload.cl
 assert(s.nodes.materialStatus.textContent.startsWith('导入失败'));
 console.log('PASS: hidden spelling prompts, audio route, strict answers, retry/peek scoring, resume/draft, numeric and UK variants, original-only empty state, material-pack validation and local audio storage.');
 
-const fs=(await import('node:fs')).default;
-const recordings=new Map();
-let fetches=0,decodeCalls=0,failNext=false,releaseFetch;
-const samples=Float32Array.from([.25,-.25,.5,-.5,1,-1,.125,-.125]);
-class RecordingDecoder{
- async decodeAudioData(){
-  decodeCalls++;
-  return {sampleRate:8000,numberOfChannels:1,length:samples.length,getChannelData:()=>samples};
- }
-}
-const settle=async()=>{for(let i=0;i<16;i++)await Promise.resolve()};
-const preparedURL={
- createObjectURL(blob){const url='blob:test-recording-'+recordings.size;recordings.set(url,blob);return url},
- revokeObjectURL(){}
-};
-const recordingFetch=async file=>{
- if(!file.startsWith('audio/'))return {ok:true,json:async()=>JSON.parse(fs.readFileSync(file.split('?')[0],'utf8'))};
- fetches++;
- if(failNext){failNext=false;throw Error('offline fixture')}
- if(file.includes('garage'))await new Promise(resolve=>{releaseFetch=resolve});
- return {ok:true,arrayBuffer:async()=>new ArrayBuffer(4)};
-};
-const padded=await setup('#listening',{...extra,URL:preparedURL,fetch:recordingFetch,window:{...extra.window,AudioContext:RecordingDecoder}});
-await settle();
-padded.nodes.practiceMode.value='word';padded.nodes.practiceMode.onchange();
-padded.nodes.search.value='water';padded.nodes.search.oninput();
-padded.nodes.playDictation.onclick();
-const first=lastAudio;
-assert(!first.played,'The word waits for the entire recording to decode');
-await settle();
-assert(first.played);
-assert(first.src.startsWith('blob:'),'First playback uses the prepared local recording');
-const bytes=new DataView(await recordings.get(first.src).arrayBuffer());
-const lead=5200;
-assert.equal(bytes.getUint32(24,true),8000);
-assert.equal(bytes.getUint32(40,true),(lead+samples.length+1200)*2);
-for(let i=0;i<lead;i++)assert.equal(bytes.getInt16(44+i*2,true),0);
-for(let i=0;i<samples.length;i++)assert.equal(bytes.getInt16(44+(lead+i)*2,true),Math.round(samples[i]*(samples[i]<0?32768:32767)),'Every source sample survives after the startup silence');
-padded.nodes.playDictation.onclick();await settle();
-assert(first.paused,'Replay stops the previous playback');
-assert(lastAudio.played);
-assert.equal(fetches,1,'Replay reuses the fully decoded clip');
-assert.equal(decodeCalls,1);
-padded.nodes.search.value='garage';padded.nodes.search.oninput();
-padded.nodes.playDictation.onclick();
-const cancelled=lastAudio;await settle();
-padded.nodes.search.value='water';padded.nodes.search.oninput();
-releaseFetch();await settle();
-assert(!cancelled.played,'Changing words cancels playback even while loading');
-padded.nodes.search.value='monday';padded.nodes.search.oninput();
-failNext=true;
-padded.nodes.playDictation.onclick();await settle();
-assert(!lastAudio.played,'A failed load never starts a partial recording');
-assert(padded.nodes.audioStatus.textContent.includes('无法播放'));
-padded.nodes.playDictation.onclick();await settle();
-assert(lastAudio.played,'The next attempt retries a failed download');
-assert.equal(lastAudio.playbackRate,1);
-console.log('PASS: complete first-play preparation, preserved audio samples, startup silence, cache, loading cancellation and failed-download retry.');
+s.nodes.practiceMode.value='word';s.nodes.practiceMode.onchange();
+s.nodes.search.value='water';s.nodes.search.oninput();
+s.nodes.playDictation.onclick();
+const networkFailure=lastAudio;
+assert(networkFailure.played,'Direct recording playback begins in the click handler');
+assert.equal(s.nodes.audioStatus.textContent,'','Routine playback has no repeated status messages');
+networkFailure.onerror({type:'error'});
+const retry=lastAudio;
+assert.notEqual(retry,networkFailure);
+assert.match(retry.src,/audio\/uk-ready\/water\.mp3\?retry=/);
+assert(retry.played,'A failed media request automatically retries the same British recording');
+retry.onerror({type:'error'});
+assert.equal(lastAudio,retry,'A persistent failure stops after one automatic retry');
+assert.match(s.nodes.audioStatus.textContent,/录音加载失败/);
+s.nodes.playDictation.onclick();
+const stale=lastAudio;
+s.nodes.search.value='garage';s.nodes.search.oninput();
+stale.onerror({type:'error'});
+assert.equal(lastAudio,stale,'An old word cannot retry after the user changes words');
+s.nodes.playDictation.onclick();
+const oldAttempt=lastAudio;
+const oldError=oldAttempt.onerror;
+oldError({type:'error'});
+const newAttempt=lastAudio;
+oldError({type:'error'});
+assert.equal(lastAudio,newAttempt,'Duplicate error callbacks cannot interrupt the retry');
+console.log('PASS: direct British recording playback, quiet status, bounded media retry, stale-word and duplicate-error protection.');
