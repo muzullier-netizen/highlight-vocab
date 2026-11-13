@@ -4,6 +4,7 @@
   const canonical=x=>x===undefined?'undefined':x&&typeof x==='object'?Array.isArray(x)?'['+x.map(canonical).join(',')+']':'{'+Object.keys(x).filter(k=>x[k]!==undefined).sort().map(k=>JSON.stringify(k)+':'+canonical(x[k])).join(',')+'}':JSON.stringify(x);
   const equal=(a,b)=>canonical(a)===canonical(b);
   const newer=(a,b)=>!a?clone(b):!b?clone(a):clone((Number(a.updated)||0)>(Number(b.updated)||0)?a:(Number(a.updated)||0)<(Number(b.updated)||0)?b:canonical(a)>canonical(b)?a:b);
+  const bookmark=(local,base,remote)=>base&&equal(local,base)?clone(remote):base&&equal(remote,base)?clone(local):newer(local,remote);
   function record(local={},base,remote={}){
     if(!base)return {...clone(local),...clone(remote),...newer(local,remote)};
     const result={};
@@ -29,10 +30,14 @@
         for(const k of ['attempts','correct','wrong','reveals','firstAttempts','firstCorrect'])s[k]=count(l[k],b?.[k],r[k],!base);
         return s;
       });
-      if(local.rounds?.[type]||remote.rounds?.[type])out.rounds[type]=newer(local.rounds?.[type],remote.rounds?.[type]);
+      if(local.rounds?.[type]||remote.rounds?.[type])out.rounds[type]=bookmark(local.rounds?.[type],base?.rounds?.[type],remote.rounds?.[type]);
     }
     const materials=mapRecords(Object.fromEntries((local.materials||[]).map(c=>[c.id,c])),{},Object.fromEntries((remote.materials||[]).map(c=>[c.id,c])),(l,b,r)=>newer(l,r));
     out.materials=Object.values(materials);
+    const bookmarks=mapRecords(local.bookmarks,base?.bookmarks,remote.bookmarks,bookmark);
+    // Also preserve active contexts from older clients that do not yet store filter bookmarks.
+    for(const d of [local,remote])for(const[type,r]of Object.entries(d.rounds||{}))if(typeof r.signature==='string'){const key=JSON.stringify([type,r.signature]);bookmarks[key]=bookmarks[key]?bookmark(r,base?.rounds?.[type],bookmarks[key]):clone(r)}
+    out.bookmarks=Object.fromEntries(Object.entries(bookmarks).sort((a,b)=>(b[1].updated||0)-(a[1].updated||0)).slice(0,40));
     if(out.materials.length>500)throw Error('两台设备合并后的自定义原句超过 500 条，请先导出备份并整理。');
     return out;
   }
@@ -43,7 +48,7 @@
     if(!base&&pristine)return clone(remote);
     const out={items:mapRecords(local.items,base?.items,remote.items),days:{}};
     for(const day of new Set([...Object.keys(local.days||{}),...Object.keys(remote.days||{})]))out.days[day]=count(local.days?.[day],base?.days?.[day],remote.days?.[day],!base);
-    if(local.round||remote.round)out.round=newer(local.round,remote.round);
+    if(local.round||remote.round)out.round=bookmark(local.round,base?.round,remote.round);
     if(local.dictation||remote.dictation)out.dictation=dictation(local.dictation,base?.dictation,remote.dictation);
     return out;
   }

@@ -43,4 +43,20 @@ await a.env.window.Dictation.storeClips([clip]);await a.sync();assert.equal(file
 await b.sync();assert.equal(b.audio.get('fixture-clip').blob.size,clip.blob.size);
 a.env.navigator.onLine=false;increment(a,1);await a.sync();assert(a.nodes.cloudStatus.textContent.includes('离线'));assert.equal(day(a),10);a.env.navigator.onLine=true;await a.sync();assert.equal(cloud.payload.decks.listening.days['2026-11-05'],10);
 const other=await browser(a.storage,'another-account');const before=pushes;await other.sync();assert.equal(pushes,before);assert(other.nodes.cloudStatus.textContent.includes('另一账号'),'Changing accounts cannot mix retained local progress');
+// Real UI handlers, separate browser stores and the production sync/merge code.
+a.nodes.mode.value='every';a.nodes.search.value='';a.nodes.listeningKind.value='';a.nodes.search.oninput();
+function completeWord(s){s.nodes.spellingInput.value=s.run('window.Dictation.round().item.w.spoken||window.Dictation.round().item.w.word');s.nodes.dictationForm.onsubmit({preventDefault(){}});s.nodes.nextSpelling.onclick()}
+completeWord(a);completeWord(a);
+const fullBookmark=a.run('window.Dictation.round().item.id');
+a.nodes.spellingInput.value='cross-device draft';a.nodes.spellingInput.oninput();
+a.nodes.listeningKind.value='月份';a.nodes.listeningKind.onchange();completeWord(a);
+const monthsBookmark=a.run('window.Dictation.round().item.id');await a.sync();
+const c=await browser();await c.sync();
+assert.equal(c.nodes.listeningKind.value,'月份');assert.equal(c.run('window.Dictation.round().item.id'),monthsBookmark,'A new computer resumes the selected monthly round');
+c.nodes.listeningKind.value='';c.nodes.listeningKind.onchange();
+assert.equal(c.run('window.Dictation.round().item.id'),fullBookmark);assert.equal(c.nodes.spellingInput.value,'cross-device draft','The other filter and its draft also transfer');
+completeWord(c);await c.sync();
+a.nodes.listeningKind.value='';a.nodes.listeningKind.onchange();await a.sync();
+assert.equal(a.run('window.Dictation.round().item.id'),c.run('window.Dictation.round().item.id'),'The first computer receives the continued position from the second');
 console.log('PASS: two browser stores, concurrent counters, no-op polling, lost-response and reload recovery, edits during network requests, private audio transfer, offline catch-up and account isolation.');
+console.log('PASS: filtered listening bookmarks and drafts transfer to a fresh computer and continue back on the original computer.');

@@ -4,7 +4,9 @@ const day=()=>new Date().toLocaleDateString('sv-SE');function toast(s){$('toast'
 // Keep the current round separately from each word's learning history.
 function checkpoint(){
  if(tab!=='study')return;
- state.round={ids:queue.map(w=>w.id),cursor,session,shown,article:$('article').value,mode:$('mode').value,search:$('search').value,frequency:$('frequency').value,kind:$('kind').value,part:$('listeningPart').value,listeningFrequency:$('listeningFrequency').value,listeningKind:$('listeningKind').value,updated:Date.now()};
+ const bookmark={ids:queue.map(w=>w.id),cursor,session,shown,article:$('article').value,mode:$('mode').value,search:$('search').value,frequency:$('frequency').value,kind:$('kind').value,part:$('listeningPart').value,listeningFrequency:$('listeningFrequency').value,listeningKind:$('listeningKind').value};
+ const previous=state.round&&{...state.round};if(previous)delete previous.updated;
+ if(JSON.stringify(previous)!==JSON.stringify(bookmark))state.round={...bookmark,updated:Date.now()};
  save();
 }
 function resumeRound(persist=true){
@@ -28,7 +30,13 @@ const partText=w=>w.parts?.length?'Part '+w.parts.join(' / '):'Part 未完整显
 function record(w){return deck==='listening'&&w.frequency===null?'基础日期词汇补充 · '+w.calendar:deck==='listening'?`题库出现 ${w.frequency} 篇 · ${partText(w)} · ${w.category}`:deck==='reading'?`${w.articleCount} 篇文章 · ${w.count} 次出现 · ${w.tags.map(t=>labels[t]).join(' / ')}`:`${w.count} 条记录`}
 function exclude(){const w=queue[cursor];if(!w||tab!=='study')return;state.items[w.id]={...st(w),excluded:true,updated:Date.now()};queue=queue.filter((x,i)=>i<cursor||x.id!==w.id);render();checkpoint();toast('已排除，可在“已排除”中恢复')}
 function recover(id){const w=words.find(w=>w.id===id);if(!w)return;state.items[id]={...st(w),excluded:false,updated:Date.now()};save();render();toast('已恢复到当前词本')}
-function stats(){$('due').textContent=words.filter(w=>!st(w).excluded&&st(w).seen&&eligible(w)).length;$('known').textContent=words.filter(w=>!st(w).excluded&&st(w).level>=2).length;$('today').textContent=state.days[day()]||0}
+function stats(){
+ const listening=deck==='listening';
+ $('dueLabel').textContent=listening?'待重练词':'待复习';$('knownLabel').textContent=listening?'累计练过':'已熟悉';$('todayLabel').textContent=listening?'累计听写次数':'今日复习';
+ if(listening){const groups=Object.values(state.dictation?.stats||{}),valid=new Set(words.filter(w=>!st(w).excluded).map(w=>w.id)),practiced=new Set(),wrong=new Set();let attempts=0;for(const group of groups)for(const[id,s]of Object.entries(group)){attempts+=s.attempts||0;if(valid.has(id)){if(s.firstAttempts||s.attempts||s.reveals)practiced.add(id);if(s.needsReview)wrong.add(id)}}$('due').textContent=wrong.size;$('known').textContent=practiced.size;$('today').textContent=attempts;return}
+ $('due').textContent=words.filter(w=>!st(w).excluded&&st(w).seen&&eligible(w)).length;$('known').textContent=words.filter(w=>!st(w).excluded&&st(w).level>=2).length;$('today').textContent=state.days[day()]||0
+}
+window.updateStudyStats=stats;
 function build(options={}){if(!Array.isArray(words)||!words.length)return;page=0;let mode=$('mode').value;queue=filtered().filter(w=>mode==='every'||mode==='focus'&&starred(w)||mode==='new'&&!st(w).seen||mode==='all'&&eligible(w));queue.sort((a,b)=>(st(b).seen?1:0)-(st(a).seen?1:0)||(starred(b)?1:0)-(starred(a)?1:0)||(deck==='listening'?b.frequency-a.frequency:0));cursor=0;session=0;render();if(options.persist!==false)checkpoint()}
 function render(){renderCards();window.Dictation?.render()}
 function renderCards(){stats();$('study').hidden=tab!=='study';$('list').hidden=tab==='study';$('mode').hidden=tab!=='study';$('shuffle').hidden=tab!=='study';$('sectionTitle').textContent=tab==='study'?'今天，从这里开始':tab==='focus'?'反复遇见，值得多记一次':tab==='excluded'?'已排除的词，随时可恢复':deck==='listening'?'你的听力高频词汇':'你的阅读词汇收藏';$('sessionCount').textContent=tab==='study'?`本轮已复习 ${session} 次`:`${filtered().length} 张词卡`;

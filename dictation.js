@@ -240,7 +240,9 @@
   const mode=()=>data().mode;
   const entries=()=>data().stats[mode()]||(data().stats[mode()]={});
   const metric=id=>entries()[id]||{};
-  const persist=()=>{data().updated=Date.now();save()};
+  const bookmarkKey=(type,r)=>JSON.stringify([type,r.signature]);
+  function rememberRound(type,r){const d=data();d.bookmarks||={};d.bookmarks[bookmarkKey(type,r)]=structuredClone(r);d.bookmarks=Object.fromEntries(Object.entries(d.bookmarks).sort((a,b)=>(b[1].updated||0)-(a[1].updated||0)).slice(0,40))}
+  const persist=()=>{const d=data();d.updated=Date.now();for(const[type,r]of Object.entries(d.rounds))rememberRound(type,r);save()};
   function stop(){playSerial++;if('speechSynthesis'in window)speechSynthesis.cancel();if(audio){audio.pause();audio=null}if(playUrl){URL.revokeObjectURL(playUrl);playUrl=''}}
   function database(){
     if(!('indexedDB'in window))return Promise.reject(Error('此浏览器不能保存原音资料，单词拼写仍可使用。'));
@@ -297,7 +299,11 @@
     const d=data(),list=filteredCandidates(),byId=new Map(list.map(x=>[x.id,x]));
     const signature=JSON.stringify([$('article').value,$('search').value,$('mode').value,$('listeningPart').value,$('listeningFrequency').value,$('listeningKind').value,d.wrongOnly,mode()!=='word'?sentencePool().map(c=>c.id+':'+c.updated).sort():null]);
     let r=d.rounds[mode()];
-    if(!r||r.signature!==signature){r=d.rounds[mode()]={signature,ids:list.map(x=>x.id),cursor:0,submitted:false,assisted:false,first:true,draft:'',updated:Date.now()}}
+    if(!r||r.signature!==signature){
+      if(r)rememberRound(mode(),r);
+      const saved=d.bookmarks?.[bookmarkKey(mode(),{signature})];
+      r=d.rounds[mode()]=saved?structuredClone(saved):{signature,ids:list.map(x=>x.id),cursor:0,submitted:false,assisted:false,first:true,draft:'',updated:Date.now()};
+    }
     // Add newly introduced dates to older rounds without moving the saved cursor.
     if(mode()==='word'&&!r.calendarVersion){
       const existing=new Set(r.ids);
@@ -318,9 +324,10 @@
   function expected(item){return item.c?markedSentence(item.c.sentence).answer:item.w.category==='数值'?item.w.spoken:item.w.word}
   function acceptable(item){const target=expected(item),map={color:'colour',theater:'theatre'};return [target,...(map[normalize(target)]?[map[normalize(target)]]:[])]}
   function stats(){
+    window.updateStudyStats?.();
     const values=Object.values(entries());
     const attempts=values.reduce((n,s)=>n+(s.firstAttempts||0),0),correct=values.reduce((n,s)=>n+(s.firstCorrect||0),0),wrong=values.filter(s=>s.needsReview).length;
-    $('dictationStats').textContent=`本模式首次作答 ${attempts} 次 · 首次答对 ${correct} 次${attempts?' · 首次正确率 '+Math.round(correct/attempts*100)+'%':''} · 待重练 ${wrong} 词`;
+    $('dictationStats').textContent=`累计首次作答 ${attempts} 次 · 首次答对 ${correct} 次${attempts?' · 首次正确率 '+Math.round(correct/attempts*100)+'%':''} · 待重练 ${wrong} 词 · 进度自动保存，跨天继续`;
   }
   function reveal(item){$('dictationSolution').hidden=false;$('spellingExpected').textContent='正确答案：'+expected(item);$('dictationTranscript').textContent=item.c?markedSentence(item.c.sentence).full:'';$('dictationMeaning').textContent=item.w.meaning+(item.c?' · 原句来源：'+item.c.source+(item.c.tts?' · 合成语音；设空用于词汇练习':' · '+item.c.start+'–'+item.c.end+' 秒'):'');const link=$('sentenceSourceLink');link.hidden=!item.c?.url;if(item.c?.url)link.href=item.c.url;}
   function render(){
@@ -430,9 +437,11 @@
       for(const key of ['attempts','correct','wrong','reveals','firstAttempts','firstCorrect'])if(v[key]!==undefined&&(!Number.isSafeInteger(v[key])||v[key]<0))throw Error('听写次数不正确');
       if(v.needsReview!==undefined&&typeof v.needsReview!=='boolean'||(v.firstCorrect||0)>(v.firstAttempts||0)||(v.correct||0)>(v.attempts||0))throw Error('听写统计不正确');
     }
-    for(const[type,r]of Object.entries(d.rounds))if(!['word','sentence','synthetic'].includes(type)||!plain(r)||!Array.isArray(r.ids)||r.ids.some(id=>typeof id!=='string')||!Number.isInteger(r.cursor)||r.cursor<0||r.cursor>r.ids.length||typeof r.signature!=='string'||r.updated!==undefined&&!Number.isFinite(r.updated)||r.draft!==undefined&&(typeof r.draft!=='string'||r.draft.length>500)||['submitted','assisted','first','retryOnAdvance'].some(k=>r[k]!==undefined&&typeof r[k]!=='boolean'))throw Error('听写续学位置格式不正确');
+    const rounds=Object.entries(d.rounds);
+    if(d.bookmarks!==undefined){if(!plain(d.bookmarks)||Object.keys(d.bookmarks).length>40)throw Error('听写筛选书签格式不正确');for(const[key,r]of Object.entries(d.bookmarks)){let pair;try{pair=JSON.parse(key)}catch{throw Error('听写筛选书签格式不正确')}if(!Array.isArray(pair)||pair.length!==2||pair[1]!==r?.signature)throw Error('听写筛选书签格式不正确');rounds.push([pair[0],r])}}
+    for(const[type,r]of rounds)if(!['word','sentence','synthetic'].includes(type)||!plain(r)||!Array.isArray(r.ids)||r.ids.some(id=>typeof id!=='string')||!Number.isInteger(r.cursor)||r.cursor<0||r.cursor>r.ids.length||typeof r.signature!=='string'||r.updated!==undefined&&!Number.isFinite(r.updated)||r.draft!==undefined&&(typeof r.draft!=='string'||r.draft.length>500)||['submitted','assisted','first','retryOnAdvance'].some(k=>r[k]!==undefined&&typeof r[k]!=='boolean'))throw Error('听写续学位置格式不正确');
   }
-  function mergeState(target,incoming){if(!incoming.dictation)return;validateState(incoming);if(!target.dictation){target.dictation=structuredClone(incoming.dictation);return}const a=target.dictation,b=incoming.dictation;const materials=new Map((a.materials||[]).map(c=>[c.id,c]));for(const c of b.materials||[])if(c.updated>(materials.get(c.id)?.updated||0))materials.set(c.id,checkText(c));if(materials.size>500)throw Error('合并后的原句超过 500 条。');a.materials=[...materials.values()];for(const type of ['word','sentence','synthetic']){a.stats[type]||={};for(const[id,v]of Object.entries(b.stats[type]||{}))if(v.updated>(a.stats[type][id]?.updated||0))a.stats[type][id]={...v}}for(const[type,r]of Object.entries(b.rounds))if((r.updated||0)>(a.rounds[type]?.updated||0))a.rounds[type]=structuredClone(r);if((b.updated||0)>(a.updated||0)){a.mode=b.mode;a.rate=b.rate;a.voiceURI=b.voiceURI||'';a.wrongOnly=b.wrongOnly;a.updated=b.updated}}
+  function mergeState(target,incoming){if(!incoming.dictation)return;validateState(incoming);if(!target.dictation){target.dictation=structuredClone(incoming.dictation);return}const a=target.dictation,b=incoming.dictation;a.bookmarks||={};for(const[key,r]of Object.entries(b.bookmarks||{}))if((r.updated||0)>(a.bookmarks[key]?.updated||0))a.bookmarks[key]=structuredClone(r);a.bookmarks=Object.fromEntries(Object.entries(a.bookmarks).sort((a,b)=>(b[1].updated||0)-(a[1].updated||0)).slice(0,40));const materials=new Map((a.materials||[]).map(c=>[c.id,c]));for(const c of b.materials||[])if(c.updated>(materials.get(c.id)?.updated||0))materials.set(c.id,checkText(c));if(materials.size>500)throw Error('合并后的原句超过 500 条。');a.materials=[...materials.values()];for(const type of ['word','sentence','synthetic']){a.stats[type]||={};for(const[id,v]of Object.entries(b.stats[type]||{}))if(v.updated>(a.stats[type][id]?.updated||0))a.stats[type][id]={...v}}for(const[type,r]of Object.entries(b.rounds))if((r.updated||0)>(a.rounds[type]?.updated||0))a.rounds[type]=structuredClone(r);if((b.updated||0)>(a.updated||0)){a.mode=b.mode;a.rate=b.rate;a.voiceURI=b.voiceURI||'';a.wrongOnly=b.wrongOnly;a.updated=b.updated}}
   function fileData(blob){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(blob)})}
   async function exportPack(){const status=$('materialStatus');try{stop();status.textContent='正在打包原音与进度…';const all=await allClips();if(all.reduce((n,c)=>n+c.blob.size,0)>75*1024*1024)throw Error('原音总量超过 75 MB，请分批整理资料。');const packed=[];for(const c of all){const{blob,...fields}=c;packed.push({...fields,audio:await fileData(blob)})}const payload={type:'translation-listening-package',version:1,exported:Date.now(),state:readState('listening'),clips:packed};const blob=new Blob([JSON.stringify(payload)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='listening-package-'+day()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent='学习包已导出，包含原音、句子、拼写记录与续学位置。'}catch(error){status.textContent=error.message}}
   async function importPack(file){if(!file)return;const status=$('materialStatus');try{if(file.size>PACK_LIMIT)throw Error('学习包超过 110 MB。');const p=JSON.parse(await file.text());if(p.type!=='translation-listening-package'||p.version!==1||!Array.isArray(p.clips)||p.clips.length>1000)throw Error('请选择本网站导出的学习包。');window.validateState?.(p.state);validateState(p.state);const incoming=[];for(const c of p.clips){if(typeof c.audio!=='string'||!/^data:audio\/[a-z0-9.+-]+;base64,[a-z0-9+/=]+$/i.test(c.audio))throw Error('原音资料格式不正确。');const[type,base64]=c.audio.split(';base64,'),binary=atob(base64),bytes=Uint8Array.from(binary,x=>x.charCodeAt(0));const{audio:unused,...fields}=c;incoming.push(checkClip({...fields,blob:new Blob([bytes],{type:type.slice(5)})}))}const existing=await allClips(),updated=incoming.filter(c=>c.updated>(existing.find(x=>x.id===c.id)?.updated||0));await storeClips(updated);const target=readState('listening');mergeState(target,p.state);for(const[id,v]of Object.entries(p.state.items||{}))if(decks.listening.some(w=>w.id===id)&&v.updated>(target.items[id]?.updated||0))target.items[id]={...v};for(const[d,n]of Object.entries(p.state.days||{}))target.days[d]=Math.max(target.days[d]||0,n);if(p.state.round&&p.state.round.updated>(target.round?.updated||0))target.round=p.state.round;localStorage.setItem(keyFor('listening'),JSON.stringify(target));if(deck==='listening')state=target;await refreshClips();window.CloudSync?.changed();status.textContent='原音与较新的进度已合并。请切换到原句听写继续。'}catch(error){status.textContent='导入失败：'+error.message}}
@@ -453,7 +462,7 @@
   }
   $('practiceMode').onchange=()=>setMode($('practiceMode').value);
   $('playbackRate').onchange=()=>{data().rate=+$('playbackRate').value;persist();stop()};
-  $('wrongOnly').onchange=()=>{data().wrongOnly=$('wrongOnly').checked;delete data().rounds[mode()];lastCard='';persist();render()};
+  $('wrongOnly').onchange=()=>{data().wrongOnly=$('wrongOnly').checked;lastCard='';render();persist()};
   $('dictationForm').onsubmit=submit;$('playDictation').onclick=play;$('stopDictation').onclick=stop;
   $('spellingInput').oninput=()=>{if(!active())return;const {r}=round();r.draft=$('spellingInput').value.slice(0,500);r.updated=Date.now();persist()};
   $('showSpellingAnswer').onclick=()=>{const{r,item}=round();if(!item)return;const peek=!r.submitted;if(peek){r.assisted=true;record(item,false,true)}reveal(item);$('spellingFeedback').textContent=peek?'已查看答案，本题不计为首次答对。':'已展开正确答案。';render()};
@@ -507,7 +516,7 @@
     return true;
   }
   $('nextSpelling').onclick=nextSpelling;
-  $('restartDictation').onclick=()=>{delete data().rounds[mode()];lastCard='';persist();render()};
+  $('restartDictation').onclick=()=>{const d=data(),r=d.rounds[mode()];if(r&&d.bookmarks)delete d.bookmarks[bookmarkKey(mode(),r)];delete d.rounds[mode()];lastCard='';render();persist()};
   $('clipAudio').onchange=()=>{if(previewUrl)URL.revokeObjectURL(previewUrl);const file=$('clipAudio').files[0];if(!file)return;previewUrl=URL.createObjectURL(file);$('clipPreview').src=previewUrl};
   $('useStartTime').onclick=()=>{$('clipStart').value=$('clipPreview').currentTime.toFixed(2)};$('useEndTime').onclick=()=>{$('clipEnd').value=$('clipPreview').currentTime.toFixed(2)};
   $('clipForm').onsubmit=async e=>{e.preventDefault();const status=$('materialStatus');try{if(!$('confirmOriginal').checked)throw Error('请先核对原题来源。');const file=$('clipAudio').files[0];if(!file)throw Error('请选择原录音文件。');const wordId=$('clipWord').value,start=+$('clipStart').value,end=+$('clipEnd').value;if(!$('clipEnd').value)throw Error('请填写句子结束时间。');if(!Number.isFinite($('clipPreview').duration))throw Error('请等待原音载入，再核对时间。');if(end>$('clipPreview').duration+.1)throw Error('结束时间超过录音长度。');const blob=new Blob([file],{type:file.type||'audio/mpeg'}),c=checkClip({id:wordId+':'+start+':'+end,wordId,source:$('clipSource').value.trim(),sentence:$('clipSentence').value.trim(),start,end,blob,updated:Date.now()});await storeClips([c]);await refreshClips();status.textContent='原题片段已保存在本浏览器。导出学习包后可带到另一台电脑。'}catch(error){status.textContent=error.message}};

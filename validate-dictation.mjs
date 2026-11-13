@@ -140,6 +140,8 @@ console.log('PASS: hidden spelling prompts, audio route, strict answers, retry/p
 
 s.nodes.practiceMode.value='word';s.nodes.practiceMode.onchange();
 s.nodes.search.value='water';s.nodes.search.oninput();
+// Filter bookmarks now retain completed rounds until the learner explicitly restarts.
+s.nodes.restartDictation.onclick();
 s.nodes.playDictation.onclick();
 const networkFailure=lastAudio;
 assert(networkFailure.played,'Direct recording playback begins in the click handler');
